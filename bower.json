@@ -1,0 +1,22 @@
+{
+  "name": "start-gulp",
+  "description": "my start template with sass/gulp",
+  "main": "index.js",
+  "authors": [
+    "Odinokun"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/Odinokun/start-gulp",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/libs/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.0.0",
+    "normalize-css": "normalize.css#^4.1.1"
+  }
+}

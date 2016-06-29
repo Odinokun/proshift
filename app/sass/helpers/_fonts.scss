@@ -1,0 +1,43 @@
+//===== begin #fonts =====
+@font-face {
+    font-family: 'HelveticaLight';
+    src: url('../fonts/HelveticaLight/HelveticaLight.eot');
+    src: url('../fonts/HelveticaLight/HelveticaLight.woff') format('woff'),
+    url('../fonts/HelveticaLight/HelveticaLight.ttf') format('truetype'),
+    url('../fonts/HelveticaLight/HelveticaLight.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'HelveticaMedium';
+    src: url('../fonts/HelveticaMedium/HelveticaMedium.eot');
+    src: url('../fonts/HelveticaMedium/HelveticaMedium.woff') format('woff'),
+    url('../fonts/HelveticaMedium/HelveticaMedium.ttf') format('truetype'),
+    url('../fonts/HelveticaMedium/HelveticaMedium.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'HelveticaRegular';
+    src: url('../fonts/HelveticaRegular/HelveticaRegular.eot');
+    src: url('../fonts/HelveticaRegular/HelveticaRegular.woff') format('woff'),
+    url('../fonts/HelveticaRegular/HelveticaRegular.ttf') format('truetype'),
+    url('../fonts/HelveticaRegular/HelveticaRegular.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@mixin helvetica($style : roman) {
+    @if $style == roman {
+        font-family: 'HelveticaRegular';
+    }
+
+    @if $style == medium {
+        font-family: 'HelveticaMedium';
+    }
+
+    @if $style == light {
+        font-family: 'HelveticaLight';
+    }
+}
+//===== end #fonts =====
