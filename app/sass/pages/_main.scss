@@ -107,13 +107,13 @@ h6 {
 }
 
 .btn-link {
+    display: inline-block;
     transition: .5s;
     text-decoration: none;
     text-transform: uppercase;
     color: #fff;
     border: 2px solid $brand-light;
 
-    @include font-size(16px);
     @include opensans(bold);
     &:hover {
         transition: .5s;
