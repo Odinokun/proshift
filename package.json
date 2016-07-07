@@ -1,21 +1,21 @@
 {
-  "name": "start-gulp",
+  "name": "ps-proshift",
   "version": "1.0.0",
-  "description": "my start template with sass/gulp",
+  "description": "proshift studio site",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Odinokun/start-gulp.git"
+    "url": "git+https://github.com/Odinokun/ps-proshift"
   },
   "author": "Odinokun",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Odinokun/start-gulp/issues"
+    "url": "https://github.com/Odinokun/ps-proshift/issues"
   },
-  "homepage": "https://github.com/Odinokun/start-gulp#readme",
+  "homepage": "https://github.com/Odinokun/ps-proshift#readme",
   "devDependencies": {
     "browser-sync": "^2.13.0",
     "del": "^2.2.1",
@@ -29,7 +29,6 @@
     "gulp-sourcemaps": "^1.6.0",
     "gulp-uglify": "^1.5.4",
     "gulp-useref": "^3.1.0",
-    "lazypipe": "^1.0.1",
     "wiredep": "^4.0.0"
   }
 }

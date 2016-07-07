@@ -1,0 +1,116 @@
+/*===== blog =====*/
+.article__wrap {
+    @include clearfix;
+}
+
+.blog__item {
+    position: relative;
+    display: inline-block;
+    width: 45%;
+    margin: 0 2% 2% 2%;
+    vertical-align: top;
+    &:hover {
+        .blog__header-title {
+            transition: .5s;
+            color: $brand-light;
+        }
+        .blog__item-image {
+            &::after,
+            &::before {
+                transition: .5s;
+                opacity: 1;
+            }
+        }
+        .blog__image-decor {
+            transition: .5s;
+            opacity: .6;
+        }
+    }
+    a {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+}
+.blog__item-image {
+    position: relative;
+    &::after,
+    &::before {
+        position: absolute;
+        z-index: 5;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        content: '';
+        transition: .5s;
+        opacity: 0;
+    }
+    &::before {
+        display: block;
+        width: 94%;
+        height: 90%;
+        border: 2px solid $brand-light;
+    }
+    &::after {
+        width: 64px;
+        height: 64px;
+        background: url('../img/blog-img-hover.png');
+        background-size: cover;
+    }
+}
+.blog__image-decor {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transition: .5s;
+    opacity: 0;
+    background-color: #000;
+}
+
+// ===== pagination =====
+.pagination {
+    .container {
+        padding: 30px 0;
+        text-align: center;
+        background-color: #fff;
+    }
+}
+.pagination__list {
+    display: inline-block;
+    margin: 0 26px;
+    vertical-align: middle;
+}
+.pagination__item {
+    display: inline-block;
+    margin: 0 5px;
+    &.active {
+        .pagination__link {
+            color: #e0e0e0;
+            border: 2px solid #e0e0e0;
+        }
+    }
+}
+.pagination__link {
+    display: inline-block;
+    // width: 35px;
+    padding: 3px 10px;
+    text-align: center;
+    text-decoration: none;
+    color: $brand-light;
+    border: 2px solid transparent;
+
+    @include opensans(bold);
+    @include font-size(16px);
+    &:hover {
+        border: 2px solid $brand-light;
+    }
+}
+// ===== /pagination =====
+/*===== /blog =====*/

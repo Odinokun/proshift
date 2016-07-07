@@ -1,7 +1,10 @@
 // helpers
 @import "helpers/_fonts.scss";
+@import "helpers/_variables.scss";
 @import "helpers/_mixins.scss";
 
 // pages styles
 @import "pages/_main.scss";
 @import "pages/_index.scss";
+@import "pages/_blog.scss";
+@import "pages/_blog-one.scss";

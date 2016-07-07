@@ -12,11 +12,10 @@ const concat        = require('gulp-concat');  // конкатенации фа�
 const browserSync   = require('browser-sync'); // виртуальный сервер
 const del           = require('del');  // удаление файлов/директорий
 
-const useref        = require('gulp-useref'); //перенос файлов на продакшн
-const gulpif        = require('gulp-if');     //фильтрует подключенные к index.html файлы
+const useref        = require('gulp-useref'); // парсинг-перенос файлов
+const gulpif        = require('gulp-if');
 const uglify        = require('gulp-uglify'); //минификация js
 const csso          = require('gulp-csso'); //минификация css
-const lazypipe      = require('lazypipe'); //для задачи в задаче
 
 
 // ============ компиляция sass ============
@@ -58,7 +57,7 @@ gulp.task('bower', function () {
 
 
 // ============ слежение за изменениями в файлах ============
-gulp.task('watch', ['browser-sync', 'sass'], function() {
+gulp.task('watch', ['browser-sync', 'sass', 'bower'], function() {
     gulp.watch('bower.json', ['bower']);                // bower
     gulp.watch('app/sass/**/*.scss', ['sass']);         // sass
     gulp.watch('app/js/**/*.js', browserSync.reload);   // js
@@ -83,9 +82,6 @@ gulp.task('build', ['clean'], function () {
     return gulp.src('app/*.html')
         .pipe(useref())
         .pipe(gulpif('*.js', uglify())) //минифицируем js
-        // старт sourceMap для css
-        .pipe(useref({}, lazypipe().pipe(sourcemaps.init, { loadMaps: true })))
         .pipe(gulpif('*.css', csso())) //минифицируем css
-        .pipe(sourcemaps.write()) // запись sourceMap для css
         .pipe(gulp.dest('dist'));
 });

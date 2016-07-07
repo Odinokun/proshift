@@ -1,12 +1,12 @@
 {
-  "name": "start-gulp",
-  "description": "my start template with sass/gulp",
+  "name": "ps-proshift",
+  "description": "proshift studio site",
   "main": "index.js",
   "authors": [
     "Odinokun"
   ],
   "license": "ISC",
-  "homepage": "https://github.com/Odinokun/start-gulp",
+  "homepage": "https://github.com/Odinokun/ps-proshift",
   "ignore": [
     "**/.*",
     "node_modules",
