@@ -48,7 +48,7 @@ gulp.task('browser-sync', function() { // создаем таск browser-sync
 
 // ============ автоматическое прописывание путей к файлам Bower ============
 gulp.task('bower', function () {
-  gulp.src('app/index.html')
+  gulp.src('app/*.html')
     .pipe(wiredep({
       directory : 'app/bower_components/'
     }))

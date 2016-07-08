@@ -1,1 +1,1 @@
-$(function(){console.log("Hasta la vista, baby")});
+$(function(){$(".tab__control-link").on("click",function(t){t.preventDefault();var a=$(this).closest(".tab__controls-item"),i=$(".tab__item"),e=a.data("class");i.filter(".tab__item_"+e).add(a).addClass("active").siblings().removeClass("active")})});

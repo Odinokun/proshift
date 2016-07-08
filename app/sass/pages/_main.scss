@@ -36,10 +36,8 @@ ol {
     }
 }
 a {
-    transition: .3s;
     color: $brand-dark;
     &:hover {
-        transition: .3s;
         color: $brand-light;
     }
 }

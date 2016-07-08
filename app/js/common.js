@@ -14,3 +14,9 @@ $(function() {
             .removeClass('active');
     });
 });
+
+$('#aboutus__slider').bxSlider({
+  mode: 'fade',
+  pager : false,
+  auto: true
+});
