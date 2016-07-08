@@ -122,6 +122,38 @@ h6 {
     }
 }
 
+// ===== section__header =====
+.section__header {
+    padding: 25px 0;
+    text-align: center;
+}
+.section__header-title {
+    font-weight: 400;
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+
+    @include font-size(30px);
+    @include opensans(light);
+    &::after,
+    &::before {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        display: block;
+        width: 180px;
+        height: 1px;
+        margin: auto;
+        content: '';
+    }
+    &::after {
+        left: -200px;
+    }
+    &::before {
+        right: -200px;
+    }
+}
+
 // ===== single page =====
 .content__header {
     margin-top: -65px;

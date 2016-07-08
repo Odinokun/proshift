@@ -1,34 +1,9 @@
 /*===== blog-one =====*/
-.article__header {
-    padding: 25px 0;
-    text-align: center;
-}
 .article__header-title {
-    font-weight: 400;
-    position: relative;
-    display: inline-block;
-    text-transform: uppercase;
     color: $brand-dark;
-
-    @include font-size(30px);
-    @include opensans(light);
     &::after,
     &::before {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        display: block;
-        width: 180px;
-        height: 1px;
-        margin: auto;
-        content: '';
         background-color: $brand-dark;
-    }
-    &::after {
-        left: -200px;
-    }
-    &::before {
-        right: -200px;
     }
 }
 

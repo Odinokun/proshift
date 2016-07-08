@@ -285,36 +285,11 @@
     background: url('../img/bg-space.jpg') 0 0 no-repeat;
     background-size: cover;
 }
-.lastworks__header {
-    padding: 25px 0;
-    text-align: center;
-}
 .lastworks__header-title {
-    font-weight: 400;
-    position: relative;
-    display: inline-block;
-    text-transform: uppercase;
     color: #fff;
-
-    @include font-size(30px);
-    @include opensans(light);
     &::after,
     &::before {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        display: block;
-        width: 180px;
-        height: 1px;
-        margin: auto;
-        content: '';
         background-color: #fff;
-    }
-    &::after {
-        left: -200px;
-    }
-    &::before {
-        right: -200px;
     }
 }
 .lastworks__item {
@@ -413,14 +388,83 @@
 .lastworks__item_btn-link {
     padding: 8px 45px;
 }
-
 /*===== /lastworks =====*/
 
-.temp {
-    width: 100%;
-    height: 200px;
-    background-color: #ccc;
+
+/*===== rocket =====*/
+.rocket {
+    background-color: #fff;
 }
+.rocket__header-title {
+    color: $brand-dark;
+    &::after,
+    &::before {
+        background-color: $brand-dark;
+    }
+}
+/*===== /rocket =====*/
+
+
+/*===== aboutus =====*/
+.aboutus {
+    background: url('../img/bg-space.jpg') 0 0 no-repeat;
+    background-size: cover;
+}
+.aboutus__header-title {
+    color: #fff;
+    &::after,
+    &::before {
+        background-color: #fff;
+    }
+}
+/*===== /aboutus =====*/
+
+
+/*===== our-blog =====*/
+.our-blog {
+    background-color: #fff;
+    .blog__item {
+        width: 30%;
+        margin: 0 16px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    .blog__image-date {
+        span {
+            padding: 2px 25px;
+        }
+    }
+    .blog__header-title {
+        padding: 20px 0 15px 0;
+
+        @include font-size(14px);
+    }
+}
+.our-blog__header-title {
+    color: $brand-dark;
+    &::after,
+    &::before {
+        background-color: $brand-dark;
+    }
+}
+/*===== /our-blog =====*/
+
+
+/*===== map =====*/
+.map {
+    background-color: #fff;
+}
+.map__header-title {
+    color: $brand-dark;
+    &::after,
+    &::before {
+        background-color: $brand-dark;
+    }
+}
+/*===== /map =====*/
+
+
 /*===== footer =====*/
 .footer {
     padding: 45px 0;
