@@ -34,47 +34,27 @@
                         <img src="img/header__logo.png" alt="logo__pic" class="header__logo-pic">
                     </a>
                 </div>
-                <nav class="header__nav">
-                    <ul class="nav__list">
-                        <li class="nav__item">
-                            <a href="#" class="nav__link">Компания</a>
-                            <ul class="nav__list-sub">
-                                <li class="nav__item-sub">
-                                    <a href="#" class="nav__link-sub">Отзывы</a>
-                                </li>
-                                <li class="nav__item-sub">
-                                    <a href="#" class="nav__link-sub">Блог</a>
-                                </li>
-                                <li class="nav__item-sub">
-                                    <a href="#" class="nav__link-sub">Партнерам</a>
-                                </li>
-                                <li class="nav__item-sub">
-                                    <a href="#" class="nav__link-sub">Сайт бесплатно</a>
-                                </li>
+                <div id='hmenu'>
+                    <ul>
+                        <li class='active parent'><a href='https://www.google.com.ua'>Компания</a>
+                            <ul>
+                                <li><a href='#'>Отзывы</a></li>
+                                <li><a href='#'>Блог</a></li>
+                                <li><a href='#'>Партнерам</a></li>
+                                <li><a href='#'>Сайт бесплатно</a></li>
                             </ul>
                         </li>
-                        <li class="nav__item">
-                            <a href="#" class="nav__link">Услуги</a>
-                            <ul class="nav__list-sub">
-                                <li class="nav__item-sub">
-                                    <a href="#" class="nav__link-sub">Услуга</a>
-                                </li>
-                                <li class="nav__item-sub">
-                                    <a href="#" class="nav__link-sub">Супер Услуга</a>
-                                </li>
-                                <li class="nav__item-sub">
-                                    <a href="#" class="nav__link-sub">Мега Супер Услуга</a>
-                                </li>
+                        <li class='parent'><a href='https://www.google.com.ua'>Услуги</a>
+                            <ul>
+                                <li><a href='#'>Услуга</a></li>
+                                <li><a href='#'>Супер Услуга</a></li>
+                                <li><a href='#'>Мега Супер Услуга</a></li>
                             </ul>
                         </li>
-                        <li class="nav__item">
-                            <a href="#" class="nav__link">Портфолио</a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#" class="nav__link">Контакты</a>
-                        </li>
+                        <li><a href='#'>Портфолио</a></li>
+                        <li><a href='#'>Контакты</a></li>
                     </ul>
-                </nav>
+                </div>
                 <div class="header__adress">
                     <div class="header__adress-city">
                         Санкт-Петербург
@@ -155,7 +135,6 @@
                                                     Подробнее об услуге
                                                 </a>
                                             </div>
-
                                         </div>
                                         <div class="top__slider-item-block middle">
                                             <p>Минимальный сайт для размещения важной информации о вашей компании и контактов. Отлично подходит для мастеров которые работают на себя или на время разработки основного веб-сайта.</p>
@@ -177,7 +156,6 @@
                                                     Подробнее об услуге
                                                 </a>
                                             </div>
-
                                         </div>
                                         <div class="top__slider-item-block middle">
                                             <p>Минимальный сайт для размещения важной информации о вашей компании и контактов. Отлично подходит для мастеров которые работают на себя или на время разработки основного веб-сайта.</p>
@@ -224,7 +202,6 @@
                                         <div class="top__slider-item-block right">
                                             <img src="img/slider-pic.png" alt="pic">
                                         </div>
-
                                     </li>
                                     <li class="top__slider-item">
                                         <img src="img/lastworks-item-2.jpg" alt="">
@@ -390,9 +367,11 @@
             <!-- BEGIN #lastworks  -->
             <section class="lastworks">
                 <div class="lastworks__header section__header">
-                    <h2 class="lastworks__header-title section__header-title">
-                        Последние работы
-                    </h2>
+                    <div class="container">
+                        <h2 class="lastworks__header-title section__header-title">
+                            Последние работы
+                        </h2>
+                    </div>
                 </div>
                 <div class="lastworks__list">
                     <div class="container">
@@ -468,18 +447,22 @@
             <!-- BEGIN #rocket  -->
             <section class="rocket">
                 <div class="rocket__header section__header">
-                    <h2 class="rocket__header-title section__header-title">
-                        6 этапов успешного проекта
-                    </h2>
+                    <div class="container">
+                        <h2 class="rocket__header-title section__header-title">
+                            6 этапов успешного проекта
+                        </h2>
+                    </div>
                 </div>
             </section>
             <!-- END #rocket -->
             <!-- BEGIN #aboutus  -->
             <section class="aboutus">
                 <div class="aboutus__header section__header">
-                    <h2 class="aboutus__header-title section__header-title">
-                        О нас говорят
-                    </h2>
+                    <div class="container">
+                        <h2 class="aboutus__header-title section__header-title">
+                            О нас говорят
+                        </h2>
+                    </div>
                 </div>
                 <div class="aboutus__slider container">
                     <ul class="aboutus__slider-list" id="aboutus__slider">
@@ -507,9 +490,11 @@
             <!-- BEGIN #our-blog  -->
             <section class="our-blog">
                 <div class="our-blog__header section__header">
-                    <h2 class="our-blog__header-title section__header-title">
-                        Наш блог
-                    </h2>
+                    <div class="container">
+                        <h2 class="our-blog__header-title section__header-title">
+                            Наш блог
+                        </h2>
+                    </div>
                 </div>
                 <div class="our-blog__section container">
                     <section class="blog__item">
@@ -557,9 +542,11 @@
             <!-- BEGIN #map  -->
             <section class="map">
                 <div class="map__header section__header">
-                    <h2 class="map__header-title section__header-title">
-                        Связаться с нами
-                    </h2>
+                    <div class="container">
+                        <h2 class="map__header-title section__header-title">
+                            Связаться с нами
+                        </h2>
+                    </div>
                 </div>
                 <div class="map__body">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d255987.65208989035!2d30.044885529055883!3d59.91714833753931!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696378cc74a65ed%3A0x6dc7673fab848eff!2z0KHQsNC90LrRgi3Qn9C10YLQtdGA0LHRg9GA0LMsINCg0L7RgdGB0LjRjw!5e0!3m2!1sru!2sua!4v1467965334654" width="100%" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>

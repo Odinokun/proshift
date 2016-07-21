@@ -125,7 +125,11 @@ h6 {
 .section__header {
     padding: 25px 10px;
     text-align: center;
-    overflow: hidden;
+    .container {
+        overflow: hidden;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
 }
 .section__header-title {
     font-weight: 400;
@@ -140,17 +144,19 @@ h6 {
         position: absolute;
         top: 0;
         bottom: 0;
-        display: block;
-        width: 180px;
+        display: inline-block;
+        width: 1000px;
         height: 1px;
         margin: auto;
         content: '';
     }
     &::after {
-        left: -200px;
+        right: 100%;
+        left: -1050px;
     }
     &::before {
-        right: -200px;
+        right: -1050px;
+        left: 100%;
     }
 }
 
@@ -181,8 +187,8 @@ h6 {
     text-align: center;
 }
 .breadcrumbs__list {
-    list-style: none;
     margin: 0;
+    list-style: none;
 }
 .breadcrumbs__item {
     display: inline-block;

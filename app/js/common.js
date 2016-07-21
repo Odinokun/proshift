@@ -53,7 +53,7 @@
                 }
             };
             resizeFix();
-            return $(window).on('resize', resizeFix);
+            return $(document.documentElement.clientWidth).on('resize', resizeFix);
         });
     };
 })(jQuery);
