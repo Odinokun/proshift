@@ -1,0 +1,29 @@
+/*===== our-blog =====*/
+.our-blog {
+    background-color: #fff;
+    .blog__item {
+        width: 30%;
+        margin: 0 16px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    .blog__image-date {
+        span {
+            padding: 2px 25px;
+        }
+    }
+    .blog__header-title {
+        padding: 20px 0 15px 0;
+
+        @include font-size(14px);
+    }
+}
+.our-blog__header-title {
+    color: $brand-dark;
+    &::after,
+    &::before {
+        background-color: $brand-dark;
+    }
+}
+/*===== /our-blog =====*/

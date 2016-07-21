@@ -1,0 +1,13 @@
+/*===== footer =====*/
+.footer {
+    padding: 45px 0;
+    background: url('../img/bg-space.jpg') 50% 50% no-repeat;
+
+    @include opensans(regular);
+    @include font-size(12px);
+}
+.footer__copyright {
+    text-align: center;
+    color: #fff;
+}
+/*===== /footer =====*/

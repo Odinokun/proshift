@@ -1,0 +1,246 @@
+/*===== top__section =====*/
+.top__section {
+    overflow: hidden;
+    background: url('../img/bg-space.jpg') 0 0 no-repeat;
+    background-size: cover;
+}
+.top__section_header {
+    padding-top: 80px;
+    text-align: center;
+}
+.top__section_header-title {
+    font-weight: 400;
+    padding: 30px 10px 0 10px;
+    text-transform: uppercase;
+    color: #fff;
+
+    @include opensans(light);
+    @include font-size(24px);
+}
+.top__section_header-text {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px 30px 10px;
+    p {
+        color: #fff;
+
+        @include opensans(light);
+        @include font-size(16px);
+    }
+}
+
+//===== tabs =====
+.top__section_tab {
+    position: relative;
+    .tab__controls-list {
+        margin-bottom: 40px;
+    }
+    .tab__controls-item {
+        position: relative;
+        display: inline-block;
+        margin: 0 15px;
+        padding: 10px 20px;
+        list-style: none;
+        transition: .5s;
+
+        @include opensans(light);
+        @include font-size(18px);
+        &::before,
+        &::after {
+            position: absolute;
+            top: 0;
+            display: inline-block;
+            content: '';
+            transition: .5s;
+            opacity: 0;
+        }
+        &::before {
+            right: 20%;
+            bottom: 50%;
+            left: 0;
+            border-top: 2px solid $brand-light;
+            border-left: 2px solid $brand-light;
+        }
+        &::after {
+            right: 0;
+            bottom: 0;
+            left: 20%;
+            border-right: 2px solid $brand-light;
+            border-bottom: 2px solid $brand-light;
+        }
+        &:hover {
+            .tab__control-link {
+                transition: .5s;
+                text-decoration: none;
+                color: $brand-light;
+            }
+        }
+        &.active {
+            &::before,
+            &::after {
+                transition: .5s;
+                opacity: 1;
+            }
+            .tab__control-link {
+                text-decoration: none;
+            }
+        }
+    }
+    .tab__control-link {
+        position: relative;
+        z-index: 5;
+        transition: .5s;
+        color: #fff;
+    }
+    .tab__item {
+        position: absolute;
+        z-index: -100;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        list-style: none;
+        &.active {
+            position: relative;
+            z-index: 100;
+        }
+    }
+}
+
+// ===== slider =====
+.tab__item-list {
+    //общие стили для верхнего слайдера
+    margin: 20px 0 140px 0;
+    // margin-bottom: 160px;
+    .top__slider-list {
+        margin: 0;
+    }
+    .top__slider-item {
+        padding: 40px 100px;
+        color: #fff;
+    }
+    .bx-pager {
+        bottom: -80px;
+    }
+    .bx-wrapper {
+        border: none;
+        background-color: transparent;
+        box-shadow: none;
+    }
+    .bx-wrapper .bx-controls-direction a {
+        width: 60px;
+        height: 80px;
+        margin-top: -40px;
+    }
+    .bx-wrapper .bx-prev {
+        background: url('../../img/aboutus__slider-arr.png') 0 -185px no-repeat;
+        &:hover {
+            background-position: -15px 0;
+        }
+    }
+    .bx-wrapper .bx-next {
+        background: url('../../img/aboutus__slider-arr.png') -1px -255px no-repeat;
+        &:hover {
+            background-position: -15px -100px;
+        }
+    }
+    .top__slider-item-block {
+        display: inline-block;
+        text-align: left;
+        vertical-align: middle;
+        h2 {
+            font-weight: 400;
+            margin-bottom: 30px;
+
+            @include opensans(light);
+            @include font-size(44px);
+            .upper {
+                line-height: 48px;
+                text-transform: uppercase;
+            }
+            .bold {
+                line-height: 72px;
+
+                @include opensans(bold);
+                @include font-size(60px);
+            }
+        }
+        p {
+            @include opensans(light);
+            letter-spacing: .35px;
+        }
+        &.left {
+            width: 35%;
+        }
+        &.middle {
+            width: 39%;
+            padding: 0 0 0 30px;
+        }
+        &.right {
+            width: 25%;
+            text-align: center;
+            img {
+                display: inline-block;
+            }
+        }
+    }
+}
+.tab__item_01,
+.tab__item_02 {
+    //стили для слайдера в первом табе
+    .bx-pager-item {
+        margin: 0 5px;
+    }
+    .bx-pager-link {
+        position: relative;
+        padding: 5px 15px 0 15px;
+        transition: .8s;
+        color: #fff;
+        border-top: 2px solid transparent;
+
+        @include font-size(18px);
+        @include opensans(light);
+        &::after {
+            position: absolute;
+            top: -20px;
+            right: 0;
+            left: 0;
+            width: 2px;
+            height: 20px;
+            margin: auto;
+            content: '';
+            transition: .8s;
+            opacity: 0;
+            background-color: $brand-light;
+        }
+        &::before {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 7px;
+            left: 0;
+            content: '';
+            transition: .8s;
+            opacity: 0;
+            border-right: 2px solid $brand-light;
+            border-left: 2px solid $brand-light;
+        }
+        &:hover {
+            transition: .8s;
+            text-decoration: none;
+            color: $brand-light;
+        }
+        &.active {
+            transition: .8s;
+            border-top: 2px solid $brand-light;
+            text-decoration: none;
+            &::after,
+            &::before {
+                transition: .8s;
+                opacity: 1;
+            }
+        }
+    }
+}
+/*===== /top__section =====*/

@@ -1,0 +1,12 @@
+/*===== rocket =====*/
+.rocket {
+    background-color: #fff;
+}
+.rocket__header-title {
+    color: $brand-dark;
+    &::after,
+    &::before {
+        background-color: $brand-dark;
+    }
+}
+/*===== /rocket =====*/

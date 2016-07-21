@@ -96,7 +96,8 @@ h6 {
     flex: 1;
 }
 .container {
-    width: 1200px;
+    width: 100%;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 30px;
 }
@@ -124,6 +125,7 @@ h6 {
 .section__header {
     padding: 25px 0;
     text-align: center;
+    overflow: hidden;
 }
 .section__header-title {
     font-weight: 400;
@@ -154,8 +156,7 @@ h6 {
 
 // ===== single page =====
 .content__header {
-    margin-top: -65px;
-    padding: 220px 0 40px 0;
+    padding: 150px 0 40px 0;
     background: url('../img/bg-space.jpg') 50% 50% no-repeat;
     background-size: cover;
 }

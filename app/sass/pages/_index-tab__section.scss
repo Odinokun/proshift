@@ -1,0 +1,155 @@
+/*===== tab__section =====*/
+.tab__section_header {
+    text-align: center;
+    background-color: #fff;
+}
+.tab__section_header-title {
+    font-weight: 400;
+    padding: 30px 10px 10px 10px;
+    color: $text-light;
+
+    @include font-size(24px);
+}
+.tab__section_header-text {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 10px 20px 30px 10px;
+    &::after {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: block;
+        width: 80%;
+        height: 1px;
+        margin: auto;
+        content: '';
+        background-color: $text-light;
+    }
+    p {
+        color: $text-light;
+
+        @include font-size(16px);
+    }
+}
+
+// ===== tab-controls =====
+.tab__section-controls {
+    padding: 30px 0 20px 0;
+    .tab__controls {
+        margin: 0;
+        text-align: justify;
+        &::after {
+            display: inline-block;
+            width: 100%;
+            height: 0;
+            content: '';
+        }
+    }
+    .tab__controls-item {
+        display: inline-block;
+        width: 130px;
+        list-style: none;
+        text-align: center;
+        vertical-align: top;
+        &:hover,
+        &.active {
+            .tab__control-icon {
+                transition: .5s;
+                box-shadow: 0 0 0 3px #fff, 0 0 0 5px $brand-light,  0 0 0 8px $brand-light;
+                &::before {
+                    transition: .5s;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    .tab__control-icon {
+        position: relative;
+        display: inline-block;
+        width: 110px;
+        height: 110px;
+        transition: .5s;
+        border-radius: 50%;
+        background-color: $brand-light;
+        box-shadow: 0 0 0 3px #fff, 0 0 0 5px $brand-light,  0 0 0 8px transparent;
+        img {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+        }
+        &::before {
+            position: absolute;
+            bottom: -90px;
+            left: -10px;
+            display: inline-block;
+            width: 130px;
+            height: 45px;
+            content: '';
+            transition: .5s;
+            opacity: 0;
+            background: url('../img/tab-section-hover.png') no-repeat;
+            background-size: contain;
+        }
+    }
+    .tab__control-text {
+        position: relative;
+        display: inline-block;
+        padding: 5px;
+        text-decoration: none;
+        text-transform: uppercase;
+
+        @include opensans(bold);
+        @include font-size(16px);
+        @include line-height(22px);
+    }
+}
+
+// ===== tab-text =====
+.tab__section-text {
+    position: relative;
+    background: url('../img/bg-space.jpg') 0 0 no-repeat;
+    background-size: cover;
+    &::after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        content: '';
+        opacity: .6;
+        background-color: #0a3546;
+    }
+}
+.tab__section-list {
+    position: relative;
+    z-index: 10;
+    margin: 0;
+    padding: 35px 0 0 0;
+    .tab__item {
+        display: none;
+        &.active {
+            display: block;
+            p {
+                color: #fff;
+
+                @include font-size(16px);
+                @include line-height(22px);
+            }
+        }
+    }
+}
+
+// ===== btn =====
+.tab__item_btn {
+    padding: 20px;
+    text-align: center;
+}
+.tab__item_btn-link {
+    padding: 8px 45px;
+}
+/*===== /tab__section =====*/

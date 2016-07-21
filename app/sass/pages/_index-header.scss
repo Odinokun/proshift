@@ -1,0 +1,182 @@
+/*===== header =====*/
+.header {
+    position: fixed;
+    z-index: 9999;
+    right: 0;
+    left: 0;
+    padding: 5px 0;
+    text-align: center;
+    background-color: $brand-dark;
+}
+.header__logo,
+.header__nav,
+.header__adress,
+.header__btn {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+// ===== logo =====
+.header__logo {
+    width: 210px;
+}
+.header__logo-pic {
+    display: block;
+    max-width: 200px;
+    max-height: 55px;
+}
+
+// ===== adress =====
+.header__adress {
+    line-height: 20px;
+    width: 150px;
+    margin: 0 25px 0 10px;
+    letter-spacing: .35px;
+    color: #fff;
+}
+.header__adress-phone a {
+    text-decoration: none;
+    color: #fff;
+}
+
+// ===== btn =====
+.header__btn-link {
+    padding: 10px 30px;
+
+    @include font-size(16px);
+}
+
+// ===== nav =====
+#hmenu,
+#hmenu ul,
+#hmenu ul li,
+#hmenu ul li a,
+#hmenu #menu-button {
+    line-height: 1;
+    position: relative;
+    display: block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border: 0;
+}
+#hmenu:after,
+#hmenu > ul:after {
+    line-height: 0;
+    display: block;
+    visibility: hidden;
+    clear: both;
+    height: 0;
+    content: '.';
+}
+#hmenu #menu-button {
+    display: none;
+}
+#hmenu {
+    display: inline-block;
+    vertical-align: middle;
+}
+#hmenu > ul > li {
+    float: left;
+}
+#hmenu.align-center > ul {
+    font-size: 0;
+    text-align: center;
+}
+#hmenu.align-center > ul > li {
+    display: inline-block;
+    float: none;
+}
+#hmenu.align-center ul ul {
+    text-align: left;
+}
+#hmenu.align-right > ul > li {
+    float: right;
+}
+#hmenu.align-right ul ul {
+    text-align: right;
+}
+#hmenu > ul > li > a {
+    font-size: 14px;
+    padding: 20px 15px;
+    transition: color .2s ease;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+
+    @include opensans(bold);
+}
+#hmenu > ul > li:hover > a,
+#hmenu > ul > li.active > a {
+    color: $brand-light;
+}
+#hmenu > ul > li.parent > a {
+    padding-right: 25px;
+}
+#hmenu > ul > li.parent > a::after {
+    position: absolute;
+    top: 24px;
+    right: 10px;
+    width: 4px;
+    height: 4px;
+    content: '';
+    transition: border-color .2s ease;
+    transform: rotate(45deg);
+    border-right: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+}
+#hmenu > ul > li:hover.parent > a::after,
+#hmenu > ul > li.active.parent > a::after {
+    border-right: 1px solid $brand-light;
+    border-bottom: 1px solid $brand-light;
+}
+#hmenu > ul > li.parent:hover > a::after {
+    border-color: $brand-light;
+}
+#hmenu ul ul {
+    position: absolute;
+    left: -9999px;
+}
+#hmenu li > ul {
+    border-top: 2px solid transparent;
+}
+#hmenu li:hover > ul {
+    left: auto;
+    border-top: 2px solid $brand-light;
+}
+#hmenu.align-right li:hover > ul {
+    right: 0;
+}
+#hmenu ul ul ul {
+    top: 0;
+    margin-left: 100%;
+}
+#hmenu.align-right ul ul ul {
+    margin-right: 100%;
+    margin-left: 0;
+}
+#hmenu ul ul li {
+    height: 0;
+    transition: height .2s ease;
+}
+#hmenu ul li:hover > ul > li {
+    height: 32px;
+}
+#hmenu ul ul li a {
+    font-size: 14px;
+    width: 190px;
+    padding: 10px 20px;
+    transition: color .2s ease;
+    text-align: left;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $text-dark;
+    background: #fff;
+
+    @include opensans(bold);
+}
+#hmenu ul ul li:hover > a,
+#hmenu ul ul li a:hover {
+    color: $brand-light;
+}
+/*===== /header =====*/

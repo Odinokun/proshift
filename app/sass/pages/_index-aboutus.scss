@@ -1,0 +1,58 @@
+/*===== aboutus =====*/
+.aboutus {
+    background: url('../img/bg-space.jpg') 0 0 no-repeat;
+    background-size: cover;
+}
+.aboutus__header-title {
+    color: #fff;
+    &::after,
+    &::before {
+        background-color: #fff;
+    }
+}
+// ===== slider =====
+.aboutus__slider {
+    padding: 10px 0;
+    text-align: center;
+    .bx-wrapper {
+        margin-bottom: 0;
+        border: none;
+        background-color: transparent;
+        box-shadow: none;
+    }
+    ul {
+        margin: 0;
+    }
+    .bx-wrapper .bx-controls-direction a {
+        width: 60px;
+        height: 80px;
+        margin-top: -40px;
+    }
+    .bx-wrapper .bx-prev {
+        background: url('../../img/aboutus__slider-arr.png') 0 -185px no-repeat;
+        &:hover {
+            background-position: -15px 0;
+        }
+    }
+    .bx-wrapper .bx-next {
+        background: url('../../img/aboutus__slider-arr.png') -1px -255px no-repeat;
+        &:hover {
+            background-position: -15px -100px;
+        }
+    }
+}
+.aboutus__slider-item {
+    color: #fff;
+}
+.aboutus__slider-text {
+    width: 80%;
+    margin: 0 auto;
+    padding: 30px 0;
+
+    @include opensans(light);
+    @include font-size(24px);
+}
+.aboutus__slider-signature {
+    padding: 5px 0;
+}
+/*===== /aboutus =====*/

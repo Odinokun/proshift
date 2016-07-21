@@ -1,0 +1,16 @@
+/*===== map =====*/
+.map {
+    background-color: #fff;
+}
+.map__header-title {
+    color: $brand-dark;
+    &::after,
+    &::before {
+        background-color: $brand-dark;
+    }
+}
+.map__body {
+    width: 100%;
+    height: 400px;
+}
+/*===== /map =====*/

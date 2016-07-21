@@ -5,7 +5,20 @@
 
 // pages styles
 @import "pages/_main.scss";
-@import "pages/_index.scss";
+@import "pages/_index-header.scss";
+@import "pages/_index-top__section.scss";
+@import "pages/_index-tab__section.scss";
+@import "pages/_index-lastworks.scss";
+@import "pages/_index-rocket.scss";
+@import "pages/_index-aboutus.scss";
+@import "pages/_index-our-blog.scss";
+@import "pages/_index-map.scss";
+@import "pages/_index-footer.scss";
 @import "pages/_solar-system.scss";
 @import "pages/_blog.scss";
 @import "pages/_blog-one.scss";
+
+// media styles
+@import "media/_m-main.scss";
+@import "media/_m-index-header.scss";
+@import "media/_m-blog.scss";

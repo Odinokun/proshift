@@ -1,0 +1,110 @@
+/*===== lastworks =====*/
+.lastworks {
+    background: url('../img/bg-space.jpg') 0 0 no-repeat;
+    background-size: cover;
+}
+.lastworks__header-title {
+    color: #fff;
+    &::after,
+    &::before {
+        background-color: #fff;
+    }
+}
+.lastworks__item {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    width: 350px;
+    height: 270px;
+    margin: 12px;
+    vertical-align: top;
+    &:hover {
+        &::before {
+            transition: .5s;
+            opacity: .9;
+        }
+        &::after {
+            transition: .5s;
+            opacity: 1;
+        }
+        .lastworks__item-text {
+            transition: .5s;
+            opacity: 1;
+        }
+    }
+    &::before {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: block;
+        content: '';
+        transition: .5s;
+        opacity: 0;
+        background-color: #112236;
+    }
+    &::after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: block;
+        width: 92%;
+        height: 90%;
+        margin: auto;
+        content: '';
+        transition: .5s;
+        opacity: 0;
+        border: 2px solid $brand-light;
+    }
+}
+.lastworks__item-link {
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.lastworks__item-pic {
+    display: block;
+    min-width: 100%;
+    min-height: 100%;
+}
+.lastworks__item-hover {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    &::before {
+        //выравниваем тект по центру
+        display: inline-block;
+        height: 100%;
+        content: '';
+        vertical-align: middle;
+    }
+}
+.lastworks__item-text {
+    position: relative;
+    z-index: 5;
+    display: inline-block;
+    width: 150px;
+    transition: .5s;
+    vertical-align: middle;
+    opacity: 0;
+    color: #fff;
+}
+
+// ===== btn =====
+.lastworks__item_btn {
+    padding: 10px 0 30px 0;
+    text-align: center;
+}
+.lastworks__item_btn-link {
+    padding: 8px 45px;
+}
+/*===== /lastworks =====*/
