@@ -3,5 +3,15 @@
     .blog__item {
         width: 96%;
     }
+
+    // ===== pagination =====
+    .pagination__item {
+        margin: 0 2px;
+    }
+    .pagination__link {
+        padding: 0px 7px;
+        @include font-size(14px);
+    }
+    // ===== /pagination =====
 }
 /*===== /blog =====*/
