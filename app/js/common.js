@@ -188,7 +188,7 @@ $(document).ready(function() {
 
 // bx slider 03 in top__section
 $(document).ready(function() {
-    $('#top__slider-02').bxSlider({
+    $('#top__slider-03').bxSlider({
         mode: 'fade',
         buildPager: function(slideIndex) {
             switch (slideIndex) {
@@ -210,7 +210,7 @@ $(document).ready(function() {
 
 // bx slider 04 in top__section
 $(document).ready(function() {
-    $('#top__slider-02').bxSlider({
+    $('#top__slider-04').bxSlider({
         mode: 'fade',
         buildPager: function(slideIndex) {
             switch (slideIndex) {
