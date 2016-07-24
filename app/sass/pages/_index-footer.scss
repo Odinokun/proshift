@@ -1,13 +1,126 @@
 /*===== footer =====*/
 .footer {
-    padding: 40px 0;
+    padding: 30px 0;
     background: url('../img/bg-space.jpg') 50% 50% no-repeat;
 
     @include opensans(regular);
     @include font-size(12px);
+    .container {
+        position: relative;
+    }
+}
+.footer-big {
+    padding: 520px 0 30px 0;
 }
 .footer__copyright {
     text-align: center;
     color: #fff;
+}
+.footer__info {
+    position: absolute;
+    right: 0;
+    bottom: 50px;
+    left: 0;
+    margin-top: -40px;
+    padding: 10px;
+    border: 4px solid $brand-light;
+    background-color: #fff;
+}
+.footer__adress,
+.footer__form {
+    display: inline-block;
+    margin-right: -5px;
+    vertical-align: top;
+}
+.footer__adress {
+    width: 25%;
+    margin-right: 5%;
+}
+.footer__adress-item {
+    position: relative;
+    margin: 35px;
+    padding-bottom: 20px;
+    &:last-child::after {
+        display: none;
+    }
+    &::after {
+        position: absolute;
+        right: 20px;
+        bottom: -15px;
+        left: 20px;
+        height: 1px;
+        content: '';
+        background-color: #eaeaea;
+    }
+}
+.footer__adress-title {
+    font-weight: 400;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+    color: $brand-light;
+
+    @include opensans(bold);
+    @include font-size(18px);
+}
+.footer__adress-text {
+    color: #838383;
+
+    @include font-size(14px);
+    @include line-height(18px);
+}
+.footer__adress-link {
+    text-decoration: none;
+    color: #838383;
+
+    @include font-size(14px);
+    @include line-height(16px);
+}
+.footer__form {
+    width: 70%;
+    padding: 35px 35px 20px 80px;
+    header {
+        margin-bottom: 15px;
+    }
+    .half-left {
+        float: left;
+        width: 47%;
+    }
+    .half-right {
+        float: right;
+        width: 47%;
+    }
+    .footer__form-input,
+    .footer__form-textarea {
+        width: 100%;
+        margin: 10px 0;
+        padding: 8px 15px;
+        border: 1px solid #a5a5a5;
+
+        @include font-size(14px);
+    }
+}
+.footer__form-title {
+    font-weight: 400;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+    color: $brand-light;
+
+    @include opensans(bold);
+    @include font-size(18px);
+}
+.footer__form-submit {
+    padding: 5px 50px;
+    transition: .5s;
+    text-transform: uppercase;
+    color: $text-dark;
+    border: 2px solid $brand-light;
+    background-color: transparent;
+
+    @include font-size(18px);
+    @include opensans(bold);
+    &:hover {
+        transition: .5s;
+        background-color: $brand-light;
+    }
 }
 /*===== /footer =====*/

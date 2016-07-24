@@ -14,6 +14,7 @@
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/normalize-css/normalize.css" />
     <link rel="stylesheet" href="bower_components/bxslider-4/dist/jquery.bxslider.css" />
+    <link rel="stylesheet" href="bower_components/animate.css/animate.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css css/style.css -->
@@ -907,16 +908,44 @@
                         </h2>
                     </div>
                 </div>
-                <div class="map__body">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d255987.65208989035!2d30.044885529055883!3d59.91714833753931!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696378cc74a65ed%3A0x6dc7673fab848eff!2z0KHQsNC90LrRgi3Qn9C10YLQtdGA0LHRg9GA0LMsINCg0L7RgdGB0LjRjw!5e0!3m2!1sru!2sua!4v1467965334654" width="100%" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
-                </div>
+                <div class="map__body" id="contacts__section-map"></div>
             </section>
             <!-- END #map -->
         </div>
         <!-- END #content -->
         <!-- BEGIN #footer  -->
-        <footer class="footer">
+        <footer class="footer footer-big">
             <div class="container">
+                <div class="footer__info">
+                    <div class="footer__adress">
+                        <div class="footer__adress-item">
+                            <h3 class="footer__adress-title">Адрес</h3>
+                            <a class="footer__adress-link" href="https://goo.gl/maps/8mXDTCpsFFt" target="_blank">Россия, Санкт-Петербург,<br>Костромской проспект 69/11</a><br>
+                            <span class="footer__adress-text">Время работы: с 10:00 до 19:00</span>
+                        </div>
+                        <div class="footer__adress-item">
+                            <h3 class="footer__adress-title">Телефон</h3>
+                            <a class="footer__adress-link" href="tel://+7 (812) 309-29-98">+7 (812) 309-29-98</a>
+                        </div>
+                        <div class="footer__adress-item">
+                            <h3 class="footer__adress-title">Адрес</h3>
+                            <a class="footer__adress-link" href="mailto:info@proshift.ru">info@proshift.ru</a>
+                        </div>
+                    </div>
+                    <div class="footer__form">
+                        <header>
+                            <h3 class="footer__form-title">Связаться с нами</h3>
+                            <p class="footer__form-description">Заполните форму и опишите ваш проект или предложение!</p>
+                        </header>
+                        <form action="">
+                            <input class="footer__form-input half-left" type="text" placeholder="Имя">
+                            <input class="footer__form-input half-right" type="text">
+                            <input class="footer__form-input" type="text">
+                            <textarea class="footer__form-textarea" rows="8"></textarea>
+                            <input class="footer__form-submit" type="submit">
+                        </form>
+                    </div>
+                </div>
                 <div class="footer__copyright">&#169; Copyright 2011-2016 новый взгляд на интернет маркетинг</div>
             </div>
         </footer>
@@ -931,8 +960,87 @@
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:js js/common.js -->
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/animate-css.js"></script>
     <script src="js/common.js"></script>
     <!-- endbuild -->
+    <script src='https://maps.googleapis.com/maps/api/js?key=&sensor=false&extension=.js'></script>
+    <script>
+    google.maps.event.addDomListener(window, 'load', init);
+    var map;
+
+    function init() {
+        var mapOptions = {
+            center: new google.maps.LatLng(59.9065, 30.321349),
+            zoom: 10,
+            zoomControl: true,
+            zoomControlOptions: {
+                style: google.maps.ZoomControlStyle.DEFAULT,
+            },
+            disableDoubleClickZoom: true,
+            mapTypeControl: true,
+            mapTypeControlOptions: {
+                style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
+            },
+            scaleControl: true,
+            scrollwheel: false,
+            panControl: true,
+            streetViewControl: true,
+            draggable: true,
+            overviewMapControl: true,
+            overviewMapControlOptions: {
+                opened: false,
+            },
+            mapTypeId: google.maps.MapTypeId.ROADMAP,
+            styles: [{"featureType":"all","stylers":[{"saturation":0},{"hue":"#e7ecf0"}]},{"featureType":"road","stylers":[{"saturation":-70}]},{"featureType":"transit","stylers":[{"visibility":"off"}]},{"featureType":"poi","stylers":[{"visibility":"off"}]},{"featureType":"water","stylers":[{"visibility":"simplified"},{"saturation":-60}]}],
+        }
+        var mapElement = document.getElementById('contacts__section-map');
+        var map = new google.maps.Map(mapElement, mapOptions);
+        var locations = [
+
+        ];
+        for (i = 0; i < locations.length; i++) {
+            if (locations[i][1] == 'undefined') {
+                description = '';
+            } else {
+                description = locations[i][1];
+            }
+            if (locations[i][2] == 'undefined') {
+                telephone = '';
+            } else {
+                telephone = locations[i][2];
+            }
+            if (locations[i][3] == 'undefined') {
+                email = '';
+            } else {
+                email = locations[i][3];
+            }
+            if (locations[i][4] == 'undefined') {
+                web = '';
+            } else {
+                web = locations[i][4];
+            }
+            if (locations[i][7] == 'undefined') {
+                markericon = '';
+            } else {
+                markericon = locations[i][7];
+            }
+            marker = new google.maps.Marker({
+                icon: markericon,
+                position: new google.maps.LatLng(locations[i][5], locations[i][6]),
+                map: map,
+                title: locations[i][0],
+                desc: description,
+                tel: telephone,
+                email: email,
+                web: web
+            });
+            link = '';
+        }
+
+    }
+    </script>
+
 </body>
 
 </html>

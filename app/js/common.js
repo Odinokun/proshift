@@ -221,3 +221,8 @@ $('.pagination__item').click(function(e) {
     $('.pagination__item').removeClass('active');
     $(this).addClass('active');
 });
+
+
+//animate effect
+$(".lastworks__item").animated("zoomIn", "fadeOut");
+$(".blog__item").animated("flipInX", "fadeOut");
