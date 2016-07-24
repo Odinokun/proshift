@@ -187,8 +187,10 @@
     }
 }
 .tab__item_01,
-.tab__item_02 {
-    //стили для слайдера в первом табе
+.tab__item_02,
+.tab__item_03,
+.tab__item_04 {
+    //стили для pager слайдера
     .bx-pager-item {
         margin: 0 5px;
     }

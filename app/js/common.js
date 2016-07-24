@@ -145,7 +145,7 @@ $(function() {
 $(document).ready(function() {
     $('#top__slider-01').bxSlider({
         mode: 'fade',
-        // auto: true,
+        auto: true,
         buildPager: function(slideIndex) {
             switch (slideIndex) {
                 case 0:
@@ -168,13 +168,56 @@ $(document).ready(function() {
 $(document).ready(function() {
     $('#top__slider-02').bxSlider({
         mode: 'fade',
-        auto: true,
         buildPager: function(slideIndex) {
             switch (slideIndex) {
                 case 0:
                     return 'SEO';
                 case 1:
                     return 'одностраничный сайт';
+                case 2:
+                    return 'корпоративный сайт';
+                case 3:
+                    return 'сайт-каталог';
+                case 4:
+                    return 'интернет-магазин';
+            }
+        }
+    });
+});
+
+
+// bx slider 03 in top__section
+$(document).ready(function() {
+    $('#top__slider-02').bxSlider({
+        mode: 'fade',
+        buildPager: function(slideIndex) {
+            switch (slideIndex) {
+                case 0:
+                    return 'дизайн';
+                case 1:
+                    return 'одностраничный сайт';
+                case 2:
+                    return 'корпоративный сайт';
+                case 3:
+                    return 'сайт-каталог';
+                case 4:
+                    return 'интернет-магазин';
+            }
+        }
+    });
+});
+
+
+// bx slider 04 in top__section
+$(document).ready(function() {
+    $('#top__slider-02').bxSlider({
+        mode: 'fade',
+        buildPager: function(slideIndex) {
+            switch (slideIndex) {
+                case 0:
+                    return 'поддержка';
+                case 1:
+                    return 'администрирование';
                 case 2:
                     return 'корпоративный сайт';
                 case 3:
