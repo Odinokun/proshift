@@ -187,6 +187,24 @@ $(document).ready(function() {
 });
 
 
+// tabs in rocket__section
+$(function() {
+    $('.rocket-planet').on('mouseover', function(e) {
+        e.preventDefault();
+
+        var item = $(this).closest('.rocket-planet'),
+            contentItem = $('.rocket__item'),
+            itemPosition = item.data('class');
+
+        contentItem.filter('.rocket__item_' + itemPosition)
+            .add(item)
+            .addClass('active')
+            .siblings()
+            .removeClass('active');
+    });
+});
+
+
 // bx slider in aboutus section
 $(document).ready(function() {
     $('#aboutus__slider').bxSlider({

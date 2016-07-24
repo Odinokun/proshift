@@ -1,6 +1,7 @@
 /*===== rocket =====*/
 .rocket {
     background-color: #fff;
+    position: relative;
 }
 .rocket__header-title {
     color: $brand-dark;
@@ -8,5 +9,123 @@
     &::before {
         background-color: $brand-dark;
     }
+}
+
+.container-rocket {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.rocket-planet {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    transition: .5s;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: -4px -4px 21px 3px rgba(0,0,0,.5);
+    &:hover {
+        box-shadow: -4px -4px 21px 0px rgba(39,203,244,.5);
+        svg {
+            transition: .5s;
+
+            fill: $brand-light;
+        }
+    }
+    svg {
+        transition: .5s;
+
+        fill: #07395c;
+    }
+}
+@keyframes rotate {
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+@keyframes rotate-2 {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.rocket-planet-1 {
+    top: 250px;
+    left: 140px;
+    svg {
+        animation: rotate 40s linear infinite;
+    }
+}
+.rocket-planet-2 {
+    top: 120px;
+    left: 250px;
+    svg {
+        animation: rotate-2 140s linear infinite;
+    }
+}
+.rocket-planet-3 {
+    top: 30px;
+    left: 430px;
+    svg {
+        top: -13px;
+        left: -13px;
+        position: absolute;
+    }
+}
+.rocket-planet-4 {
+    top: 25px;
+    left: 650px;
+    &:hover {
+        box-shadow: 0 0 21px 3px rgba(39,203,244,.5);
+        svg {
+            transition: .5s;
+            fill: $brand-light;
+        }
+    }
+    svg {
+        animation: rotate 40s linear infinite;
+    }
+}
+.rocket-planet-5 {
+    top: 115px;
+    left: 855px;
+    svg {
+        animation: rotate-2 80s linear infinite;
+    }
+}
+.rocket-planet-6 {
+    top: 250px;
+    left: 980px;
+    svg {
+        animation: rotate 120s linear infinite;
+    }
+}
+
+.rocket__list {
+    max-width: 600px;
+    margin: 0 auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 250px;
+}
+.rocket__item {
+    display: none;
+    &.active {
+text-align: center;
+        display: block;
+    }
+    p {
+        color: #021123;
+        @include font-size(18px);
+        @include line-height(24px);
+    }
+}
+.rocket__item-title {
+    color: #021123;
+    @include opensans(light);
+text-transform: uppercase;
+font-weight: 400;
+margin-bottom: 30px;
+        @include font-size(30px);
 }
 /*===== /rocket =====*/
