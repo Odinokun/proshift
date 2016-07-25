@@ -145,7 +145,6 @@ $(function() {
 $(document).ready(function() {
     $('#top__slider-01').bxSlider({
         mode: 'fade',
-        auto: true,
         buildPager: function(slideIndex) {
             switch (slideIndex) {
                 case 0:

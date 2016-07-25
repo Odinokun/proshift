@@ -4,6 +4,18 @@
         width: 96%;
     }
 
+    // ===== blog-one =====
+    .blog__article {
+        width: 90%;
+        padding-right: 0;
+        margin: 0 auto;
+        float: none;
+    }
+    .blog__aside {
+        display: none;
+    }
+    // ===== /blog-one =====
+
     // ===== pagination =====
     .pagination__item {
         margin: 0 2px;
