@@ -123,4 +123,11 @@
         background-color: $brand-light;
     }
 }
+
+
+@media only screen and (max-width: 768px) {
+    .footer {
+        padding: 20px 0;
+    }
+}
 /*===== /footer =====*/

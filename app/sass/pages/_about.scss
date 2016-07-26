@@ -32,7 +32,7 @@
 .about__btn {
     position: relative;
     display: inline-block;
-    margin: 0 80px;
+    margin: 0 70px;
     padding: 10px 15px;
     transition: .5s;
     vertical-align: middle;
@@ -218,4 +218,47 @@
     padding: 10px 40px;
     color: $brand-light;
 }
-/*===== /about =====*/
+
+
+@media only screen and (max-width: 1200px) {
+    .about__btn {
+        margin: 0 40px;
+    }
+}
+@media only screen and (max-width: 1000px) {
+    .about__btn {
+        margin: 0 10px;
+    }
+
+    // ===== about-item-pic =====
+    .about__item-pic-left,
+    .about__item-pic-right {
+        display: none;
+    }
+
+    // ===== about-item-text =====
+    .about__item-text-right,
+    .about__item-text-left {
+        float: none;
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        &::after {
+            right: 30px;
+            left: 30px;
+        }
+    }
+    .about__item-btn {
+        a {
+            padding: 7px 25px;
+        }
+    }
+}
+@media only screen and (max-width: 820px) {
+    .about__btn {
+        display: block;
+        max-width: 220px;
+        margin: 10px auto;
+    }
+}
+// /*===== /about =====*/
