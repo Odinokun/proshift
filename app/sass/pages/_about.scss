@@ -87,7 +87,6 @@
         display: block;
         min-height: 100%;
     }
-
 }
 .about__item-pic-left {
     left: 0;
@@ -109,11 +108,11 @@
     max-width: 600px;
     padding: 60px;
     &::after {
-        pointer-events: none;
         position: absolute;
         top: 30px;
         bottom: 30px;
         content: '';
+        pointer-events: none;
         border: 2px solid $brand-light;
     }
 }
@@ -129,8 +128,8 @@
     float: right;
     margin-right: 50%;
     &::after {
-        left: -1000px;
         right: 30px;
+        left: -1000px;
     }
 }
 .about__item-title {
@@ -172,5 +171,51 @@
             background-color: $brand-light;
         }
     }
+}
+
+// ===== footer__about-banner =====
+.footer__about-banner {
+    position: relative;
+    max-width: 640px;
+    margin: 75px auto;
+    padding: 40px;
+    text-align: center;
+    background-color: #fff;
+    &::after {
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        bottom: 12px;
+        left: 12px;
+        display: block;
+        content: '';
+        pointer-events: none;
+        border: 2px solid $brand-light;
+    }
+}
+.footer__about-title {
+    font-weight: 400;
+    position: relative;
+    padding: 10px 0 20px 0;
+    color: #515151;
+
+    @include opensans(regular);
+    @include font-size(30px);
+    @include line-height(36px);
+    &::after {
+        display: block;
+        width: 100px;
+        height: 3px;
+        margin: 20px auto 0;
+        content: '';
+        background-color: $brand-light;
+    }
+}
+.footer__about-btn {
+    padding: 20px 0 0 0;
+}
+.footer__about-link {
+    padding: 10px 40px;
+    color: $brand-light;
 }
 /*===== /about =====*/
