@@ -200,6 +200,7 @@
         transition: .8s;
         color: #fff;
         border-top: 2px solid transparent;
+        font-weight: 400;
 
         @include font-size(18px);
         @include opensans(light);

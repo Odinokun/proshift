@@ -14,8 +14,11 @@ const del           = require('del');  // удаление файлов/дире
 
 const useref        = require('gulp-useref'); // парсинг-перенос файлов
 const gulpif        = require('gulp-if');
+const cache         = require('gulp-cache');  // для кеширования
 const uglify        = require('gulp-uglify'); //минификация js
 const csso          = require('gulp-csso'); //минификация css
+const imagemin      = require('gulp-imagemin'); //минификация img
+const pngquant      = require('gulp-pngquant'); //минификация png
 
 
 // ============ компиляция sass ============
@@ -32,6 +35,19 @@ gulp.task('sass', function() {
         .pipe(sourcemaps.write())   // записываем изменения в soursemaps
         .pipe(gulp.dest('app/css')) // выгружаем результата в папку app/css
         .pipe(browserSync.reload({stream: true})); // обновляем CSS на странице при изменении
+});
+
+
+// ============ обработка фоточек ============
+gulp.task('img', function() {
+    return gulp.src('app/img/**/*') // берем все изображения из app
+        .pipe(cache(imagemin({  // сжимаем их с наилучшими настройками с учетом кеширования
+            interlaced: true,
+            progressive: true,
+            svgoPlugins: [{removeViewBox: false}],
+            use: [pngquant()]
+        })))
+        .pipe(gulp.dest('dist/img')); // выгружаем на продакшен
 });
 
 
@@ -72,12 +88,9 @@ gulp.task('clean', function() {
 });
 
 // ============ сборка в DIST ============
-gulp.task('build', ['clean'], function () {
+gulp.task('build', ['clean', 'img'], function () {
     var buildFonts = gulp.src('app/fonts/**/*') // переносим шрифты в продакшен
         .pipe(gulp.dest('dist/fonts'))
-
-    var buildImg = gulp.src('app/img/**/*') // переносим картинки в продакшен
-        .pipe(gulp.dest('dist/img'))
 
     return gulp.src('app/*.html')
         .pipe(useref())

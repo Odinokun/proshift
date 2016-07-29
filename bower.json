@@ -19,7 +19,8 @@
     "jquery": "2.1.4",
     "normalize-css": "normalize.css#^4.1.1",
     "bxslider-4": "^4.2.5",
-    "animate.css": "^3.5.2"
+    "animate.css": "^3.5.2",
+    "lightbox2": "^2.8.2"
   },
   "devDependencies": {}
 }

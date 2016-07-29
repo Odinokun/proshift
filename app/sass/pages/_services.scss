@@ -1,0 +1,88 @@
+/*===== services =====*/
+.services__header-title {
+    color: $brand-dark;
+    &::after,
+    &::before {
+        background-color: $brand-dark;
+    }
+}
+
+.services__item {
+    position: relative;
+    display: inline-block;
+    width: 29%;
+    margin: 10px 2%;
+    padding: 15px 15px 25px 15px;
+    transition: .5s;
+    vertical-align: top;
+    border: 4px solid $brand-light;
+    &:hover {
+        transition: .5s;
+        background-color: $brand-light;
+        .services__item-title,
+        .services__item-text {
+            color: #fff;
+        }
+        .services__item-icon {
+            svg {
+                fill: #fff;
+            }
+        }
+    }
+}
+.services__item-icon {
+    width: 65px;
+    height: 65px;
+    svg {
+        fill: #0f273a;
+    }
+}
+.services__item-title {
+    margin: 10px 0;
+    color: #05345b;
+
+    @include font-size(24px);
+    @include opensans(light);
+}
+.services__item-text {
+    color: #05345b;
+
+    @include font-size(12px);
+    @include line-height(16px);
+}
+.services__item-link {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.services__text {
+    width: 100%;
+    max-width: 1130px;
+    margin: 35px auto;
+    padding: 0 20px;
+    color: #053961;
+}
+
+
+@media only screen and (max-width: 920px) {
+    .services__item {
+        width: 45%;
+        margin: 10px 2.3%;
+    }
+}
+
+
+@media only screen and (max-width: 640px) {
+    .services__item {
+        display: block;
+        width: 100%;
+        margin: 10px auto;
+    }
+    .services__text {
+        padding: 0;
+    }
+}
+/*===== /services =====*/

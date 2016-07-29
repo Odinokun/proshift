@@ -1,0 +1,143 @@
+/*===== review =====*/
+.review__header-title {
+    color: $brand-dark;
+    &::after,
+    &::before {
+        background-color: $brand-dark;
+    }
+}
+
+.review__item {
+    position: relative;
+    padding: 40px 0;
+    &::after {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: block;
+        width: 80%;
+        height: 1px;
+        margin: auto;
+        content: '';
+        background-color: #e2e2e2;
+    }
+}
+.review__left,
+.review__middle,
+.review__right {
+    display: inline-block;
+    margin-right: -5px;
+    vertical-align: top;
+}
+
+.review__left {
+    width: 20%;
+    .review__logo {
+        margin-bottom: 20px;
+        img {
+            max-width: 90%;
+        }
+    }
+    .review__description {
+        span {
+            text-transform: uppercase;
+            color: $brand-light;
+
+            @include font-size(18px);
+            @include opensans(bold);
+        }
+        ul {
+            margin-left: 0;
+        }
+        li {
+            list-style: none;
+        }
+    }
+    .review__left-link {
+        text-transform: uppercase;
+        color: $brand-light;
+
+        @include font-size(12px);
+        @include opensans(bold);
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+.review__middle {
+    width: 20%;
+    img {
+        display: block;
+        max-width: 100%;
+        max-height: 210px;
+        margin: 0 auto;
+        border: 5px solid $brand-light;
+    }
+}
+.review__right {
+    width: 60%;
+    padding: 0 20px;
+    .review__text {
+        font-style: italic;
+        position: relative;
+        color: #363636;
+
+        @include opensans(semibold);
+        @include line-height(22px);
+        span {
+            font-style: normal;
+        }
+    }
+    .review__signature {
+        margin-top: 10px;
+        padding-left: 40%;
+        color: #8a8a8a;
+
+        @include line-height(18px);
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .review__left,
+    .review__middle {
+        display: inline-block;
+        width: 30%;
+    }
+    .review__right {
+        display: block;
+        width: 100%;
+        margin-top: 20px;
+    }
+    .review__right {
+        padding: 0;
+        .review__signature {
+            padding-left: 0;
+        }
+    }
+}
+@media only screen and (max-width: 640px) {
+    .review__left,
+    .review__middle {
+        width: 50%;
+    }
+}
+@media only screen and (max-width: 480px) {
+    .review__left,
+    .review__middle {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+    .review__description {
+        display: none;
+    }
+    .review__middle {
+        margin-top: 20px;
+        text-align: left;
+        img {
+            max-height: 350px;
+        }
+    }
+}
+/*===== /review =====*/

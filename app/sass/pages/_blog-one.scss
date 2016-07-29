@@ -35,7 +35,7 @@
 }
 .blog__image-date {
     position: absolute;
-    bottom: -14px;
+    bottom: -12px;
     left: -7px;
     display: inline-block;
     background-color: $brand-light;
@@ -187,6 +187,18 @@
         @include line-height(12px);
         @include font-size(10px);
         @include opensans(bold);
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .blog__article {
+        width: 90%;
+        padding-right: 0;
+        margin: 0 auto;
+        float: none;
+    }
+    .blog__aside {
+        display: none;
     }
 }
 /*===== /blog-one =====*/
