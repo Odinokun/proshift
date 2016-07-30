@@ -1,0 +1,132 @@
+/*===== 404 =====*/
+.wrapper__404 {
+    background: url('../img/bg-space.jpg') 0 0;
+    background-size: cover;
+}
+
+// ===== rotate stars =====
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+#first_stars {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 600px;
+    height: 500px;
+    margin: auto;
+    animation: spin 5s infinite linear;
+    circle {
+        fill: #fff;
+    }
+}
+#second_stars {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 700px;
+    height: 600px;
+    margin: auto;
+    animation: spin 10s infinite linear;
+    circle {
+        fill: #000;
+    }
+}
+#planet {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 600px;
+    height: 500px;
+    margin: auto;
+    .img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 90%;
+        margin: auto;
+        animation: spin 10s infinite linear;
+        background: url('../img/spaceman.png') 100% 100% no-repeat;
+    }
+}
+
+// ===== banner =====
+.banner__404 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 300px;
+    height: 250px;
+    margin: auto;
+    text-align: center;
+}
+.banner__404-toptext {
+    display: block;
+    color: #fff;
+
+    @include font-size(24px);
+}
+.banner__404-title {
+    display: block;
+    color: #fff;
+
+    @include opensans(light);
+    @include font-size(120px);
+}
+.banner__404-link {
+    display: inline-block;
+    padding: 10px 30px 10px 10px;
+    color: $brand-light;
+    background: url('../img/404-back.png') 100% 10% no-repeat;
+
+    @include font-size(18px);
+    &:hover {
+        text-decoration: none;
+    }
+}
+.banner__404-footer {
+    position: absolute;
+    right: -200px;
+    bottom: -270px;
+    left: -200px;
+    display: block;
+    color: #fff;
+
+    @include font-size(18px);
+}
+
+.footer__404 {
+    background: transparent;
+}
+
+
+@media only screen and (max-width: 768px) {
+    #first_stars {
+        animation: none;
+    }
+    #second_stars {
+        animation: none;
+    }
+    #planet {
+        display: none;
+    }
+    .banner__404-footer {
+        display: none;
+    }
+}
+/*===== /404 =====*/

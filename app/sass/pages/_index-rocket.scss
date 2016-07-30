@@ -1,7 +1,7 @@
 /*===== rocket =====*/
 .rocket {
-    background-color: #fff;
     position: relative;
+    background-color: #fff;
 }
 .rocket__header-title {
     color: $brand-dark;
@@ -25,7 +25,7 @@
     background-color: #fff;
     box-shadow: -4px -4px 21px 3px rgba(4,30,57,.2);
     &:hover {
-        box-shadow: -4px -4px 21px 0px rgba(39,203,244,.5);
+        box-shadow: -4px -4px 21px 0 rgba(39,203,244,.5);
         svg {
             transition: .5s;
 
@@ -66,9 +66,9 @@
     top: 30px;
     left: 430px;
     svg {
+        position: absolute;
         top: -13px;
         left: -13px;
-        position: absolute;
     }
 }
 .rocket-planet-4 {
@@ -78,6 +78,7 @@
         box-shadow: 0 0 21px 3px rgba(39,203,244,.5);
         svg {
             transition: .5s;
+
             fill: $brand-light;
         }
     }
@@ -101,31 +102,40 @@
 }
 
 .rocket__list {
+    position: absolute;
+    top: 250px;
+    right: 0;
+    left: 0;
     max-width: 600px;
     margin: 0 auto;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 250px;
 }
 .rocket__item {
     display: none;
     &.active {
-text-align: center;
         display: block;
+        text-align: center;
     }
     p {
         color: #021123;
+
         @include font-size(18px);
         @include line-height(24px);
     }
 }
 .rocket__item-title {
+    font-weight: 400;
+    margin-bottom: 30px;
+    text-transform: uppercase;
     color: #021123;
+
     @include opensans(light);
-text-transform: uppercase;
-font-weight: 400;
-margin-bottom: 30px;
-        @include font-size(30px);
+    @include font-size(30px);
+}
+
+
+@media only screen and (max-width: 1220px) {
+    .rocket {
+        display: none;
+    }
 }
 /*===== /rocket =====*/

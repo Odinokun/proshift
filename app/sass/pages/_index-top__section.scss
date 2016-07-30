@@ -43,6 +43,7 @@
         padding: 10px 20px;
         list-style: none;
         transition: .5s;
+        vertical-align: middle;
 
         @include opensans(light);
         @include font-size(18px);
@@ -167,8 +168,9 @@
             }
         }
         p {
-            @include opensans(light);
             letter-spacing: .35px;
+
+            @include opensans(light);
         }
         &.left {
             width: 35%;
@@ -195,12 +197,12 @@
         margin: 0 5px;
     }
     .bx-pager-link {
+        font-weight: 400;
         position: relative;
         padding: 5px 15px 0 15px;
         transition: .8s;
         color: #fff;
         border-top: 2px solid transparent;
-        font-weight: 400;
 
         @include font-size(18px);
         @include opensans(light);
@@ -236,13 +238,59 @@
         }
         &.active {
             transition: .8s;
-            border-top: 2px solid $brand-light;
             text-decoration: none;
+            border-top: 2px solid $brand-light;
             &::after,
             &::before {
                 transition: .8s;
                 opacity: 1;
             }
+        }
+    }
+}
+
+
+@media only screen and (max-width: 1200px) {
+    //===== tabs =====
+    .top__section_tab {
+        .tab__controls-item {
+            max-width: 25%;
+        }
+    }
+}
+
+
+@media only screen and (max-width: 1020px) {
+    // ===== slider =====
+    .tab__item-list {
+        margin: 20px 0;
+        .bx-pager {
+            display: none;
+        }
+        .top__slider-item-block {
+            &.left {
+                width: 50%;
+                margin-right: -5px;
+            }
+            &.middle {
+                display: none;
+            }
+            &.right {
+                text-align: center;
+                width: 50%;
+                margin-right: -5px;
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: 980px) {
+    //===== tabs =====
+    .top__section_tab {
+        .tab__controls-item {
+            width: 40%;
+            max-width: 40%;
         }
     }
 }

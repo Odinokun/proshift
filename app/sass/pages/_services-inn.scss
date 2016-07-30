@@ -1,0 +1,48 @@
+/*===== services-inn =====*/
+.services-inn__item {
+    position: relative;
+    padding: 10px 40px 15px 140px;
+    border: 4px solid $brand-light;
+}
+.services-inn__item-icon {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 35px;
+    width: 65px;
+    height: 65px;
+    margin: auto;
+    svg {
+        fill: #0f273a;
+    }
+}
+.services-inn__item-title {
+    margin: 10px 0;
+    color: #05345b;
+
+    @include font-size(24px);
+    @include opensans(light);
+}
+.services-inn__item-text {
+    color: #05345b;
+
+    @include font-size(12px);
+    @include line-height(16px);
+}
+
+.services-inn__text {
+    margin: 40px 0;
+    color: #053961;
+}
+
+
+@media only screen and (max-width: 540px) {
+    .services-inn__item {
+        padding: 25px;
+    }
+    .services-inn__item-icon {
+        position: static;
+        display: inline-block;
+    }
+}
+/*===== /services-inn =====*/

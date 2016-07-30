@@ -21,10 +21,13 @@
         background-color: $brand-light;
         .services__item-title,
         .services__item-text {
+            transition: .5s;
             color: #fff;
         }
         .services__item-icon {
             svg {
+                transition: .5s;
+
                 fill: #fff;
             }
         }
@@ -34,17 +37,21 @@
     width: 65px;
     height: 65px;
     svg {
+        transition: .5s;
+
         fill: #0f273a;
     }
 }
 .services__item-title {
     margin: 10px 0;
+    transition: .5s;
     color: #05345b;
 
     @include font-size(24px);
     @include opensans(light);
 }
 .services__item-text {
+    transition: .5s;
     color: #05345b;
 
     @include font-size(12px);

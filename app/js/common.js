@@ -1,3 +1,17 @@
+//Chrome Smooth Scroll
+(function() {
+
+    try {
+        $.browserSelector();
+        if ($("html").hasClass("chrome")) {
+            $.smoothScroll();
+        }
+    } catch (err) {
+
+    };
+});
+
+
 // top menu
 (function($) {
     $.fn.menumaker = function(options) {
@@ -105,9 +119,22 @@
 })(jQuery);
 
 
+//background top menu
+$(function() {
+    $(window).scroll(function() {
+        var topToDocument = window.pageYOffset || document.documentElement.scrollTop;
+        var menu = document.getElementById('header');
+        if (topToDocument <= 20) {
+            menu.style.background = 'transparent';
+        } else {
+            menu.style.background = '#022f53';
+        }
+    });
+});
+
+
 // tabs in top__section
 $(function() {
-    // console.log("Hasta la vista, baby");
     $('.tab__control-link').on('click', function(e) {
         e.preventDefault();
 
@@ -124,21 +151,21 @@ $(function() {
 });
 
 // tabs in tab__section
-$(function() {
-    $('.tab__control-link').on('click', function(e) {
-        e.preventDefault();
+// $(function() {
+//     $('.tab__control-link').on('click', function(e) {
+//         e.preventDefault();
 
-        var item = $(this).closest('.tab__controls-item'),
-            contentItem = $('.tab__item'),
-            itemPosition = item.data('class');
+//         var item = $(this).closest('.tab__controls-item'),
+//             contentItem = $('.tab__item'),
+//             itemPosition = item.data('class');
 
-        contentItem.filter('.tab__item_' + itemPosition)
-            .add(item)
-            .addClass('active')
-            .siblings()
-            .removeClass('active');
-    });
-});
+//         contentItem.filter('.tab__item_' + itemPosition)
+//             .add(item)
+//             .addClass('active')
+//             .siblings()
+//             .removeClass('active');
+//     });
+// });
 
 
 // bx slider 01 in top__section

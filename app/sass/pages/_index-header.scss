@@ -1,12 +1,11 @@
 /*===== header =====*/
 .header {
     position: fixed;
-    z-index: 9999;
+    z-index: 10000;
     right: 0;
     left: 0;
     padding: 5px 0;
     text-align: center;
-    background-color: $brand-dark;
 }
 .header__logo,
 .header__nav,
@@ -195,15 +194,16 @@
 @media only screen and (max-width: 768px) {
     .header {
         position: relative;
+        background-color: $brand-dark !important;
         .container {
             padding: 0;
         }
     }
     .header__logo {
         position: absolute;
+        z-index: 10;
         top: 15px;
         left: 30px;
-        z-index: 10;
     }
     .header__logo-pic {
         max-height: 30px;

@@ -26,4 +26,19 @@
         background-color: $brand-dark;
     }
 }
+.our-blog__section {
+    text-align: center;
+}
+
+
+@media only screen and (max-width: 960px) {
+.our-blog__section {
+    .blog__item {
+        width: 45%;
+        &:last-child {
+            display: none;
+        }
+    }
+}
+}
 /*===== /our-blog =====*/
