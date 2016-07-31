@@ -1,17 +1,37 @@
-/*===== lastworks =====*/
-.lastworks {
+/*===== portfolio =====*/
+.portfolio {
+    margin-bottom: 40px;
     text-align: center;
-    background: url('../img/bg-space.jpg') 0 0 no-repeat;
-    background-size: cover;
 }
-.lastworks__header-title {
-    color: #fff;
-    &::after,
-    &::before {
-        background-color: #fff;
+
+.portfolio__btn {
+    position: relative;
+    margin-right: -5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    text-transform: uppercase;
+    color: #aaa;
+    border: none;
+    background: none;
+
+    @include font-size(16px);
+    @include opensans(semibold);
+    &::after {
+        padding-left: 5px;
+        content: ' /';
+        color: $brand-light;
+    }
+    &:last-child {
+        &::after {
+            display: none;
+        }
+    }
+    &.active {
+        color: #426286;
     }
 }
-.lastworks__item {
+
+.portfolio__item {
     position: relative;
     display: inline-block;
     overflow: hidden;
@@ -28,7 +48,7 @@
             transition: .5s;
             opacity: 1;
         }
-        .lastworks__item-text {
+        .portfolio__item-text {
             transition: .5s;
             opacity: 1;
         }
@@ -61,7 +81,7 @@
         border: 2px solid $brand-light;
     }
 }
-.lastworks__item-link {
+.portfolio__item-link {
     position: absolute;
     z-index: 10;
     top: 0;
@@ -69,12 +89,12 @@
     bottom: 0;
     left: 0;
 }
-.lastworks__item-pic {
+.portfolio__item-pic {
     display: block;
     min-width: 100%;
     min-height: 100%;
 }
-.lastworks__item-hover {
+.portfolio__item-hover {
     position: absolute;
     top: 0;
     right: 0;
@@ -89,7 +109,7 @@
         vertical-align: middle;
     }
 }
-.lastworks__item-text {
+.portfolio__item-text {
     position: relative;
     z-index: 5;
     display: inline-block;
@@ -100,62 +120,45 @@
     color: #fff;
 }
 
-// ===== btn =====
-.lastworks__item_btn {
-    padding: 10px 0 30px 0;
-    text-align: center;
-}
-.lastworks__item_btn-link {
-    padding: 8px 45px;
-}
-
 
 @media only screen and (max-width: 1200px) {
-    .lastworks__item {
+    .portfolio__item {
         width: 35%;
-        &:nth-child(5),
-        &:nth-child(6) {
-            display: none;
-        }
     }
 }
 
 
 @media only screen and (max-width: 980px) {
-    .lastworks__item {
+    .portfolio__item {
         width: 40%;
     }
 }
 
 
 @media only screen and (max-width: 840px) {
-    .lastworks__item {
+    .portfolio__item {
         width: 50%;
-        &:nth-child(3),
-        &:nth-child(4) {
-            display: none;
-        }
     }
 }
 
 
 @media only screen and (max-width: 740px) {
-    .lastworks__item {
+    .portfolio__item {
         width: 70%;
     }
 }
 
 
 @media only screen and (max-width: 480px) {
-    .lastworks__item {
+    .portfolio__item {
         width: 90%;
     }
 }
 
 
 @media only screen and (max-width: 400px) {
-    .lastworks__item {
+    .portfolio__item {
         width: 100%;
     }
 }
-/*===== /lastworks =====*/
+/*===== /portfolio =====*/

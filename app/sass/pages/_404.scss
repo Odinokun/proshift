@@ -22,7 +22,7 @@
     width: 600px;
     height: 500px;
     margin: auto;
-    animation: spin 5s infinite linear;
+    // animation: spin 5s infinite linear;
     circle {
         fill: #fff;
     }
@@ -36,10 +36,16 @@
     width: 700px;
     height: 600px;
     margin: auto;
-    animation: spin 10s infinite linear;
+    // animation: spin 10s infinite linear;
     circle {
         fill: #000;
     }
+}
+#Layer_1 {
+    animation: spin 5s infinite linear;
+}
+#Layer_5 {
+    animation: spin 15s infinite linear;
 }
 #planet {
     position: absolute;
@@ -50,7 +56,7 @@
     width: 600px;
     height: 500px;
     margin: auto;
-    .img {
+    .spaceman {
         position: absolute;
         top: 0;
         right: 0;
