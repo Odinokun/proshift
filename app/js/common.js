@@ -292,6 +292,15 @@ $('.pagination__item').click(function(e) {
 });
 
 
+// add class active in portfolio
+$('.portfolio__btn').click(function(e) {
+    e.preventDefault();
+    $('.portfolio__btn').removeClass('active');
+    $(this).addClass('active');
+});
+
+
 //animate effect
 $(".lastworks__item").animated("zoomIn", "fadeOut");
 $(".blog__item").animated("flipInX", "fadeOut");
+$(".portfolio__item").animated("zoomIn", "fadeOut");

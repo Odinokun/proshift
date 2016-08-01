@@ -13,6 +13,7 @@
     color: #aaa;
     border: none;
     background: none;
+    outline: none;
 
     @include font-size(16px);
     @include opensans(semibold);

@@ -2,6 +2,7 @@
 .footer {
     padding: 30px 0;
     background: url('../img/bg-space.jpg') 50% 50% no-repeat;
+    background-size: cover;
 
     @include opensans(regular);
     @include font-size(12px);
@@ -125,9 +126,72 @@
 }
 
 
+@media only screen and (max-width: 1200px) {
+    .footer-big {
+        padding: 30px 0 30px 0;
+    }
+    .footer__info {
+        position: static;
+        margin-top: -30px;
+        margin-bottom: 30px;
+    }
+}
+
+
+@media only screen and (max-width: 1000px) {
+    .footer__adress {
+        width: 30%;
+    }
+    .footer__form {
+        width: 65%;
+    }
+}
+
+
+@media only screen and (max-width: 800px) {
+    .footer__adress-item {
+        margin: 35px 10px 35px 35px;
+    }
+    .footer__form {
+        padding: 35px 35px 20px 35px;
+    }
+}
+
+
 @media only screen and (max-width: 768px) {
     .footer {
         padding: 20px 0;
+    }
+    .footer__info {
+        position: static;
+        margin-top: -20px;
+        margin-bottom: 20px;
+    }
+}
+
+
+@media only screen and (max-width: 650px) {
+    .footer__adress,
+    .footer__form {
+        display: block;
+    }
+    .footer__adress {
+        width: 100%;
+        margin: 0;
+    }
+    .footer__adress-item {
+        margin: 10px;
+        &::after {
+            bottom: -0;
+        }
+    }
+    .footer__form {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .footer__form-submit {
+        padding: 5px 49px;
     }
 }
 /*===== /footer =====*/

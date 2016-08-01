@@ -53,6 +53,7 @@
         list-style: none;
         text-align: center;
         vertical-align: top;
+        position: relative;
         &:hover,
         &.active {
             .tab__control-icon {
@@ -74,13 +75,25 @@
         border-radius: 50%;
         background-color: $brand-light;
         box-shadow: 0 0 0 3px #fff, 0 0 0 5px $brand-light,  0 0 0 8px transparent;
-        img {
+        svg {
             position: absolute;
             top: 0;
             right: 0;
             bottom: 0;
             left: 0;
+            max-width: 60px;
+            max-height: 60%;
             margin: auto;
+            transition: .5s;
+
+            fill: #0f273a;
+        }
+        &:hover {
+            svg {
+                transition: .5s;
+
+                fill: #fff;
+            }
         }
         &::before {
             position: absolute;
@@ -100,12 +113,21 @@
         position: relative;
         display: inline-block;
         padding: 5px;
+        transition: .5s;
         text-decoration: none;
         text-transform: uppercase;
 
         @include opensans(bold);
         @include font-size(16px);
         @include line-height(22px);
+    }
+    .hide-link {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: none;
     }
 }
 
@@ -151,5 +173,106 @@
 }
 .tab__item_btn-link {
     padding: 8px 45px;
+}
+
+
+@media only screen and (max-width: 880px) {
+    // ===== tab-controls =====
+    .tab__section-controls {
+        .tab__controls-item {
+            width: 100px;
+            &:hover,
+            &.active {
+                .tab__control-icon {
+                    box-shadow: 0 0 0 2px #fff, 0 0 0 5px $brand-light,  0 0 0 5px $brand-light;
+                }
+            }
+        }
+        .tab__control-icon {
+            width: 80px;
+            height: 80px;
+            box-shadow: 0 0 0 2px #fff, 0 0 0 5px $brand-light,  0 0 0 5px transparent;
+            svg {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                max-width: 60px;
+                max-height: 60%;
+                margin: auto;
+                transition: .5s;
+
+                fill: #0f273a;
+            }
+            &:hover {
+                svg {
+                    transition: .5s;
+
+                    fill: #fff;
+                }
+            }
+            &::before {
+                bottom: -80px;
+                width: 100px;
+            }
+        }
+        .tab__control-text {
+            @include font-size(14px);
+            @include line-height(18px);
+        }
+    }
+}
+
+
+@media only screen and (max-width: 690px) {
+    // ===== tab-controls =====
+    .tab__section-controls {
+        .tab__controls {
+                text-align: center;
+            &::after {
+                display: none;
+            }
+        }
+        .tab__controls-item {
+            margin: 0 30px;
+        }
+        .tab__control-icon {
+            &::before {
+                display: none;
+            }
+        }
+        .tab__control-text {
+            margin-bottom: 10px;
+        }
+        .hide-link {
+            display: block;
+        }
+    }
+
+    // ===== tab-text =====
+    .tab__section-text {
+        display: none;
+    }
+}
+/*===== /tab__section =====*/
+
+
+@media only screen and (max-width: 550px) {
+    // ===== tab-controls =====
+    .tab__section-controls {
+        .tab__controls-item {
+            margin: 0 20px;
+        }
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    // ===== tab-controls =====
+    .tab__section-controls {
+        .tab__controls-item {
+            margin: 0 10px;
+        }
+    }
 }
 /*===== /tab__section =====*/
