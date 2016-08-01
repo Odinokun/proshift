@@ -93,8 +93,9 @@ h6 {
     min-height: 100vh;
 }
 .content {
-    flex: 1;
     overflow: hidden;
+
+    flex: 1;
 }
 .container {
     width: 100%;
@@ -172,23 +173,23 @@ h6 {
 }
 .title {
     font-weight: 400;
+    position: relative;
     display: inline-block;
     padding-bottom: 10px;
     text-transform: uppercase;
     color: #fff;
-    position: relative;
-    &::after {
-        content: "";
-        width: 115px;
-        height: 3px;
-        background-color: $brand-light;
-        display: block;
-        margin: 0 auto;
-        margin-top: 20px;
-    }
 
     @include font-size(48px);
     @include opensans(light);
+    &::after {
+        display: block;
+        width: 115px;
+        height: 3px;
+        margin: 0 auto;
+        margin-top: 20px;
+        content: '';
+        background-color: $brand-light;
+    }
 }
 
 // ===== breadcrumbs =====
@@ -244,24 +245,9 @@ h6 {
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
     .animated {
-        -webkit-transition-property: none !important;
-           -moz-transition-property: none !important;
-            -ms-transition-property: none !important;
-        /*CSS transitions*/
-             -o-transition-property: none !important;
-                transition-property: none !important;
-        -webkit-transform: none !important;
-           -moz-transform: none !important;
-            -ms-transform: none !important;
-        /*CSS transforms*/
-             -o-transform: none !important;
-                transform: none !important;
-        /*CSS animations*/
-        -webkit-animation: none !important;
-           -moz-animation: none !important;
-            -ms-animation: none !important;
-             -o-animation: none !important;
-                animation: none !important;
+        transition-property: none !important;
+        transform: none !important;
+        animation: none !important;
     }
 
     .section__header-title {

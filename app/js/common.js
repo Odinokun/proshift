@@ -1,14 +1,9 @@
-//Chrome Smooth Scroll
-(function() {
-
-    try {
-        $.browserSelector();
-        if ($("html").hasClass("chrome")) {
-            $.smoothScroll();
-        }
-    } catch (err) {
-
-    };
+//preloader
+$(window).on('load', function () {
+    var $preloader = $('#p_prldr'),
+        $svg_anm   = $preloader.find('.svg_anm');
+        $svg_anm.fadeOut();
+        $preloader.delay(500).fadeOut('slow');
 });
 
 
@@ -149,23 +144,6 @@ $(function() {
             .removeClass('active');
     });
 });
-
-// tabs in tab__section
-// $(function() {
-//     $('.tab__control-link').on('click', function(e) {
-//         e.preventDefault();
-
-//         var item = $(this).closest('.tab__controls-item'),
-//             contentItem = $('.tab__item'),
-//             itemPosition = item.data('class');
-
-//         contentItem.filter('.tab__item_' + itemPosition)
-//             .add(item)
-//             .addClass('active')
-//             .siblings()
-//             .removeClass('active');
-//     });
-// });
 
 
 // bx slider 01 in top__section
