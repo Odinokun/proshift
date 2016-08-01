@@ -7,6 +7,19 @@ $(window).on('load', function () {
 });
 
 
+// scroll to ancor
+$(function() {
+    $('a[href*=#]').bind("click", function(e){
+       var anchor = $(this);
+       $('html, body').stop().animate({
+          scrollTop: $(anchor.attr('href')).offset().top - 65 + 'px'
+       }, 2000);
+       e.preventDefault();
+    });
+    return false;
+});
+
+
 // top menu
 (function($) {
     $.fn.menumaker = function(options) {
@@ -282,3 +295,19 @@ $('.portfolio__btn').click(function(e) {
 $(".lastworks__item").animated("zoomIn", "fadeOut");
 $(".blog__item").animated("flipInX", "fadeOut");
 $(".portfolio__item").animated("zoomIn", "fadeOut");
+
+
+
+$(function() {
+    // popup open
+    $('.popupOpen').click( function(){
+        $('.success, .layerBox').fadeIn();
+        return false;
+    });
+
+    // popup close
+    $('.layerBox, .success .btnBox, .close_bth').click( function(){
+        $('.layerBox, .popupBox').fadeOut();
+        return false;
+    });
+});

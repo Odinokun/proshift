@@ -1,0 +1,80 @@
+/*===== popup =====*/
+.layerBox {
+    position: fixed;
+    z-index: 20000;
+    top: 0;
+    left: 0;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background: rgba(9,83,134,.4);
+}
+.popupBox {
+    position: fixed;
+    z-index: 25000;
+    top: 50%;
+    left: 50%;
+    display: none;
+    width: 430px;
+    margin: -90px 0 0 -215px;
+    color: #676767;
+    border: 4px solid $brand-light;
+    background: #fff;
+    box-shadow: 0 0 15px rgba(49,97,130,.7);
+}
+.popupInn {
+    padding: 28px 38px;
+    text-align: center;
+}
+.popupBox .btnBox {
+    margin-top: 25px;
+    padding: 5px 25px 5px 25px;
+    transition: .5s;
+    text-align: center;
+    border: none;
+    border: 2px solid $brand-light;
+    outline: none;
+    background-color: transparent;
+    a {
+        transition: .5s;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: $brand-light;
+        box-shadow: none;
+
+        @include font-size(18px);
+        @include opensans(bold);
+    }
+    &:hover {
+        transition: .5s;
+        background-color: $brand-light;
+        a {
+            transition: .5s;
+            color: #04325b;
+        }
+    }
+}
+.popupInn-title,
+.popupInn-subtitle {
+    text-transform: uppercase;
+    color: #04325b;
+
+    @include opensans(bold);
+}
+.popupInn-title {
+    @include font-size(18px);
+    @include line-height(24px);
+}
+.popupInn-subtitle {
+    @include font-size(14px);
+    @include line-height(18px);
+}
+
+
+@media only screen and (max-width: 470px) {
+    .popupBox {
+        width: 300px;
+        margin: -105px 0 0 -150px;
+    }
+}
+/*===== /popup =====*/
