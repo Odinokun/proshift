@@ -47,7 +47,7 @@ gulp.task('img', function() {
             svgoPlugins: [{removeViewBox: false}],
             use: [pngquant()]
         })))
-        .pipe(gulp.dest('dist/img')); // выгружаем на продакшен
+        .pipe(gulp.dest('app/img'));
 });
 
 
@@ -83,12 +83,30 @@ gulp.task('watch', ['browser-sync', 'sass', 'bower'], function() {
 
 
 // ============ очистка папки DIST перед боевой сборкой ============
-gulp.task('clean', function() {
+gulp.task('clean', ['img'], function() {
     return del('dist'); // удаляем папку dist перед сборкой
 });
 
+
 // ============ сборка в DIST ============
-gulp.task('build', ['clean', 'img'], function () {
+// gulp.task('build', ['clean', 'img'], function () {
+//     var buildFonts = gulp.src('app/fonts/**/*') // переносим шрифты в продакшен
+//         .pipe(gulp.dest('dist/fonts'))
+//
+//     return gulp.src('app/*.html')
+//         .pipe(useref())
+//         .pipe(gulpif('*.js', uglify())) //минифицируем js
+//         .pipe(gulpif('*.css', csso())) //минифицируем css
+//         .pipe(gulp.dest('dist'));
+// });
+
+
+
+// ============ сборка в DIST ============
+gulp.task('build', ['clean'], function () {
+    var buildImg = gulp.src('app/img/**/*') // переносим картинки в продакшен
+        .pipe(gulp.dest('dist/img'))
+
     var buildFonts = gulp.src('app/fonts/**/*') // переносим шрифты в продакшен
         .pipe(gulp.dest('dist/fonts'))
 

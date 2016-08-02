@@ -249,7 +249,9 @@ h6 {
         transform: none !important;
         animation: none !important;
     }
-
+    .container {
+        padding: 0 20px;
+    }
     .section__header-title {
         &::after,
         &::before {
@@ -257,6 +259,14 @@ h6 {
         }
     }
     .content__header {
-        padding: 50px 0 20px 0;
+        padding: 100px 0 20px 0;
     }
+}
+
+
+@media only screen and (max-width: 424px) {
+    .title {
+        @include font-size(36px);
+    }
+
 }
