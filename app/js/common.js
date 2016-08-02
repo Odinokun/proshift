@@ -266,7 +266,7 @@ $(document).ready(function() {
 $(document).ready(function() {
     $('#portfolio-web__slider').bxSlider({
         mode: 'fade',
-        // auto: 'true',
+        auto: 'true',
         pager: false
     });
 });
