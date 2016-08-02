@@ -262,6 +262,16 @@ $(document).ready(function() {
 });
 
 
+// bx slider portfolio-web
+$(document).ready(function() {
+    $('#portfolio-web__slider').bxSlider({
+        mode: 'fade',
+        // auto: 'true',
+        pager: false
+    });
+});
+
+
 // add class active in pagination
 $('.pagination__item').click(function(e) {
     e.preventDefault();

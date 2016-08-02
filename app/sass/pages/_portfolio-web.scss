@@ -1,0 +1,99 @@
+/*===== portfolio-print =====*/
+.portfolio-web__slider {
+    margin: 0;
+}
+.portfolio-web__monitor {
+    position: absolute;
+    z-index: 10;
+    top: -25px;
+    left: -25px;
+}
+.portfolio-web__slider-wrap {
+    position: relative;
+    width: 650px;
+    margin: 50px auto 200px;
+    .top__slider-list {
+        margin-left: 10px;
+    }
+    .top__slider-item {
+        padding: 40px 100px;
+        color: #fff;
+    }
+    .bx-pager {
+        bottom: -80px;
+    }
+    .bx-wrapper {
+        border: none;
+        background-color: transparent;
+        box-shadow: none;
+    }
+    .bx-wrapper .bx-controls-direction a {
+        width: 60px;
+        height: 80px;
+        margin-top: -40px;
+    }
+    .bx-wrapper .bx-prev {
+        left: -150px;
+        background: url('../../img/portfolio-web-controls.png') 10px 10px no-repeat;
+        &:hover {
+            background-position: 10px 10px;
+        }
+    }
+    .bx-wrapper .bx-next {
+        right: -150px;
+        background: url('../../img/portfolio-web-controls.png') -31px 10px no-repeat;
+        &:hover {
+            background-position: -31px 10px;
+        }
+    }
+}
+
+@media only screen and (max-width: 970px) {
+    /*===== portfolio-print =====*/
+    .portfolio-web__monitor {
+        top: -20px;
+        left: -20px;
+        width: 580px;
+    }
+    .portfolio-web__slider-wrap {
+        width: 550px;
+        .bx-wrapper .bx-prev {
+            left: -100px;
+        }
+        .bx-wrapper .bx-next {
+            right: -100px;
+        }
+    }
+}
+
+
+@media only screen and (max-width: 767px) {
+    /*===== portfolio-print =====*/
+    .portfolio-web__monitor {
+        top: -10px;
+        left: -10px;
+        width: 370px;
+    }
+    .portfolio-web__slider-wrap {
+        width: 350px;
+        margin: 20px auto 120px;
+        .bx-wrapper .bx-prev {
+            display: none;
+        }
+        .bx-wrapper .bx-next {
+            display: none;
+        }
+    }
+}
+
+
+@media only screen and (max-width: 424px) {
+    /*===== portfolio-print =====*/
+    .portfolio-web__monitor {
+        width: 300px;
+    }
+    .portfolio-web__slider-wrap {
+        width: 280px;
+    }
+}
+/*===== /portfolio-print =====*/
