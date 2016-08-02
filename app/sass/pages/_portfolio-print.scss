@@ -1,0 +1,22 @@
+/*===== portfolio-print =====*/
+.portfolio-inn__container {
+    width: 1080px;
+}
+.portfolio-print__item-img {
+    width: 100%;
+    text-align: center;
+    img {
+        display: inline-block;
+        width: 100%;
+    }
+}
+.portfolio-print__item-text {
+    width: 100%;
+    padding: 20px 0;
+    p {
+        color: #053961;
+    }
+}
+
+
+/*===== /portfolio-print =====*/
