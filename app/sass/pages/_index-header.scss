@@ -6,6 +6,11 @@
     left: 0;
     padding: 5px 0;
     text-align: center;
+    transition: 1s;
+    &.active {
+        background: #022f53;
+        transition: 1s;
+    }
 }
 .header__logo,
 .header__nav,

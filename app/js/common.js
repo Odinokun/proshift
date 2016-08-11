@@ -120,9 +120,9 @@ $(function() {
         var topToDocument = window.pageYOffset || document.documentElement.scrollTop;
         var menu = document.getElementById('header');
         if (topToDocument <= 20) {
-            menu.style.background = 'transparent';
+            $(menu).removeClass('active');
         } else {
-            menu.style.background = '#022f53';
+            $(menu).addClass('active');
         }
     });
 });
@@ -269,14 +269,6 @@ $(document).ready(function() {
         auto: 'true',
         pager: false
     });
-});
-
-
-// add class active in pagination
-$('.pagination__item').click(function(e) {
-    e.preventDefault();
-    $('.pagination__item').removeClass('active');
-    $(this).addClass('active');
 });
 
 

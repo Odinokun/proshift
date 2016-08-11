@@ -20,8 +20,8 @@
     text-transform: uppercase;
     color: #aaa;
     border: none;
-    background: none;
     outline: none;
+    background: none;
 
     @include font-size(16px);
     @include opensans(semibold);
@@ -100,7 +100,7 @@
 }
 .portfolio__item-pic {
     display: block;
-    min-width: 100%;
+    width: 100%;
     min-height: 100%;
 }
 .portfolio__item-hover {

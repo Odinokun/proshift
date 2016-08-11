@@ -1448,6 +1448,15 @@
         }
         var mapElement = document.getElementById('contacts__section-map');
         var map = new google.maps.Map(mapElement, mapOptions);
+        var marker = new google.maps.Marker({
+            // Определяем позицию маркера
+                position: {lat: 59.9065, lng: 30.321349},
+            // Указываем на какой карте он должен появится. (На странице ведь может быть больше одной карты)
+            map: map,
+            // Пишем название маркера - появится если навести на него курсор и немного подождать
+            // title: 'Наш маркер: Большой театр',
+            icon: 'img/location.png'
+        });
         var locations = [
 
         ];
