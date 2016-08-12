@@ -134,6 +134,50 @@
 
 
 @media only screen and (max-width: 1220px) {
+    .rocket-planet-1 {
+        top: 200px;
+        left: 115px;
+    }
+    .rocket-planet-2 {
+        top: 80px;
+        left: 210px;
+    }
+    .rocket-planet-3 {
+        top: 5px;
+        left: 380px;
+    }
+    .rocket-planet-4 {
+        top: 5px;
+        left: 560px;
+    }
+    .rocket-planet-5 {
+        top: 80px;
+        left: 720px;
+    }
+    .rocket-planet-6 {
+        top: 200px;
+        left: 830px;
+    }
+
+    .rocket__list {
+        top: 230px;
+        max-width: 500px;
+    }
+    .rocket__item {
+        p {
+            @include font-size(14px);
+            @include line-height(20px);
+        }
+    }
+    .rocket__item-title {
+        margin-bottom: 10px;
+
+        @include font-size(26px);
+    }
+}
+
+
+@media only screen and (max-width: 1020px) {
     .rocket {
         display: none;
     }
