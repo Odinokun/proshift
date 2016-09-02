@@ -270,3 +270,11 @@ h6 {
     }
 
 }
+
+
+@media only screen and (max-width: 375px) {
+    .title {
+        @include font-size(30px);
+    }
+
+}

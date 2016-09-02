@@ -142,6 +142,7 @@
 @media only screen and (max-width: 740px) {
     .lastworks__item {
         width: 70%;
+        max-height: 250px;
     }
 }
 
@@ -150,6 +151,7 @@
     .lastworks__item {
         width: 90%;
         margin: 12px 0;
+        max-height: 200px;
     }
 }
 

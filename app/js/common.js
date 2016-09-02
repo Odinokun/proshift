@@ -302,7 +302,8 @@ $(function() {
     });
 
     // popup close
-    $('.layerBox, .success .btnBox, .close_bth').click( function(){
+    // $('.layerBox, .success .btnBox, .close_bth').click( function(){
+    $('.layerBox, .success, .close_bth').click( function(){
         $('.layerBox, .popupBox').fadeOut();
         return false;
     });

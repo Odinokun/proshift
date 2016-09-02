@@ -154,6 +154,7 @@
 @media only screen and (max-width: 740px) {
     .portfolio__item {
         width: 70%;
+        max-height: 250px;
     }
 }
 
@@ -161,6 +162,8 @@
 @media only screen and (max-width: 480px) {
     .portfolio__item {
         width: 90%;
+        max-height: 200px;
+        margin: 12px 0;
     }
 }
 
