@@ -160,7 +160,7 @@
             .upper {
                 text-transform: uppercase;
 
-                @include line-height(48px);
+                @include line-height(60px);
             }
             .bold {
                 @include line-height(72px);
@@ -171,16 +171,22 @@
         p {
             letter-spacing: .35px;
 
-            @include opensans(light);
+            @include line-height(22px);
+            @include font-size(16px);
+            @include opensans(regular);
         }
         &.left {
-            width: 35%;
+            width: 42%;
         }
         &.middle {
-            width: 39%;
+            // width: 39%;
+            width: 57%;
             padding: 0 0 0 30px;
+            @include line-height(22px);
+            @include font-size(16px);
         }
         &.right {
+            display: none;
             width: 25%;
             text-align: center;
             img {
@@ -274,12 +280,14 @@
                 margin-right: -5px;
             }
             &.middle {
-                display: none;
-            }
-            &.right {
+                // display: none;
                 width: 50%;
                 margin-right: -5px;
-                text-align: center;
+            }
+            &.right {
+                // width: 50%;
+                // margin-right: -5px;
+                // text-align: center;
             }
         }
     }
@@ -302,10 +310,13 @@
     .tab__item-list {
         .top__slider-item-block {
             &.left {
-                width: 70%;
+                // width: 70%;
+            }
+            &.middle {
+                // width: 30%;
             }
             &.right {
-                width: 30%;
+                // width: 30%;
             }
         }
     }
@@ -322,6 +333,9 @@
             &.left {
                 width: 100%;
                 text-align: center;
+            }
+            &.middle {
+                display: none;
             }
             &.right {
                 display: none;
